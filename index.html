@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sAInmore: one question, several AI answers side by side</title>
+<meta name="description" content="sAInmore is a free Windows app (beta) that puts the official AI websites side by side in split screen and sends one question to several AI models through their official APIs.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
+<meta name="referrer" content="no-referrer">
+<link rel="canonical" href="https://sainmore.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/AtkinsonHyperlegibleNext-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<meta property="og:title" content="sAInmore: super AI & more">
+<meta property="og:description" content="One question, several AI answers side by side. A free Windows app (beta).">
+<meta property="og:url" content="https://sainmore.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://sainmore.com/img/og.png">
+</head>
+<body>
+<!--
+  FACTS USED ON THIS PAGE (check against RELEASE-0.7.0.md before each release):
+  - Version described: 0.7.0 (first release named sAInmore), published 2026-10-28. Windows 10/11, 64-bit. Free during the beta (paid plan planned for 0.8.0: do not publish prices until the user says so). Not code-signed.
+  - Download: https://github.com/ionutmaxim-tech/brainsphere-releases/releases/latest
+    Files: sAInmore-Setup-<version>.exe, sAInmore-Portable-<version>.exe
+-->
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="sAInmore home">
+      <img src="img/logo.svg" alt="" width="40" height="40">
+      <span class="wordmark">s<span class="ai">AI</span>nmore</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="opt" href="#features">Features</a>
+      <a class="opt" href="#privacy">Privacy</a>
+      <a class="opt" href="#faq">FAQ</a>
+      <a class="btn small" href="#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <p class="name-line"><span class="wordmark">s<span class="ai">AI</span>nmore</span> · super AI &amp; more · <span class="beta">Free beta</span></p>
+    <h1 id="hero-title">One question. Several answers, side by side.</h1>
+    <p class="lede">A Windows app for people who use more than one AI. Open the official AI websites in split screen, or ask several models the same question at once and compare what they say.</p>
+    <div class="cta">
+      <a class="btn" href="#download">Download for Windows</a>
+      <span class="meta">Windows 10 and 11, 64-bit · free during the beta</span>
+    </div>
+
+    <figure class="split">
+      <div class="ask">
+        <span class="q">PostgreSQL or SQLite for a small team’s first database?</span>
+        <span class="send" aria-hidden="true">Ctrl + Enter</span>
+      </div>
+      <a class="zoom" href="img/compare-dark-full.webp" title="Open full size">
+      <picture>
+        <source media="(max-width: 760px)" srcset="img/compare-phone-dark-900.webp" width="900" height="804">
+        <source media="(prefers-color-scheme: light)" srcset="img/compare-light-1440.webp 1440w, img/compare-light-2400.webp 2400w" sizes="(min-width: 72rem) 70rem, 100vw" width="1440" height="885">
+        <img class="shot" src="img/compare-dark-1440.webp" srcset="img/compare-dark-1440.webp 1440w, img/compare-dark-2400.webp 2400w" sizes="(min-width: 72rem) 70rem, 100vw" width="1440" height="885" alt="sAInmore's Compare screen: three models' answers to the question side by side, each with its time, token count, estimated cost and context gauge, followed by a vote bar asking which answer is best, the estimated cost of all three answers, and a follow-up question box.">
+      </picture>
+      </a>
+      <figcaption>The Compare screen. The example answers were written for this page; times and costs are illustrative. Click or tap to enlarge.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="features" aria-labelledby="ways-title">
+  <div class="wrap">
+    <h2 id="ways-title">Two ways to use several AIs at once</h2>
+    <p class="intro">Use the AI websites you already pay for, or connect your own API keys. Or both. Neither is required to start.</p>
+
+    <div class="two">
+      <div>
+        <h3>The AI websites, in split screen</h3>
+        <p>Open the official sites in tabs and see 2 to 8 of them at once, side by side or in a grid. Drag the dividers to resize.</p>
+        <ul>
+          <li>Built in: ChatGPT, Claude, Gemini, Copilot, Perplexity, Le Chat, DeepSeek and Grok.</li>
+          <li>Add more from a reviewed list of AI services.</li>
+          <li>Each service keeps its own sign-in, inside the app.</li>
+          <li>Use voice mode on the AI websites. Each site asks before it can use your microphone.</li>
+          <li>Save a split screen as a preset and reopen it with one click.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Compare, through the official APIs</h3>
+        <p>Type one question and send it to several models together, using your own OpenAI, Anthropic or Google Gemini keys, or free local models through Ollama.</p>
+        <ul>
+          <li>Answers stream in side by side, with a <strong>differences</strong> view.</li>
+          <li>Ask follow-up questions; each model keeps its own conversation.</li>
+          <li><strong>Blind vote</strong>: pick the best answer before you see who wrote it, and build your own leaderboard.</li>
+          <li>Optional AI judge, cost estimates, and a gauge showing how full each model’s context is.</li>
+          <li>Export any comparison as a PDF, Markdown or JSON file.</li>
+          <li>Web search and built-in tools when you want them.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <figure class="g-wide">
+        <a class="zoom" href="img/blind-dark-full.webp" title="Open full size"><img class="shot" src="img/blind-dark-1200.webp" srcset="img/blind-dark-1200.webp 1200w, img/blind-dark-2000.webp 2000w" sizes="(min-width: 72rem) 70rem, 100vw" width="1200" height="750" loading="lazy" alt="Compare with Blind on: the three answers are labelled Answer A, B and C, with no model names or costs, and a bar asks which answer is best."></a>
+        <figcaption><strong>Blind vote.</strong> Answers show as A, B and C until you pick one. Your votes build your own leaderboard.</figcaption>
+      </figure>
+      <figure class="g-small">
+        <a class="zoom" href="img/quick-ask-dark-1240.webp" title="Open full size"><img class="shot" src="img/quick-ask-dark-620.webp" srcset="img/quick-ask-dark-620.webp 620w, img/quick-ask-dark-1240.webp 1240w" sizes="(min-width: 760px) 24rem, 100vw" width="620" height="480" loading="lazy" alt="The Quick ask window: a model picker, a short question and its answer with an estimated cost, a follow-up box, and buttons to copy the answer or ask more models in Compare."></a>
+        <figcaption><strong>Quick ask.</strong> A hotkey opens a small window over any app.</figcaption>
+      </figure>
+      <figure class="g-large">
+        <a class="zoom" href="img/library-dark-full.webp" title="Open full size"><img class="shot" src="img/library-dark-1200.webp" srcset="img/library-dark-1200.webp 1200w, img/library-dark-2000.webp 2000w" sizes="(min-width: 760px) 44rem, 100vw" width="1200" height="750" loading="lazy" alt="The Library: saved images and Markdown notes shown as large icons, with tabs for images, videos and documents, folders, sorting and search."></a>
+        <figcaption><strong>Library.</strong> Images and notes you chose to keep, with folders, tags and search.</figcaption>
+      </figure>
+    </div>
+
+    <h2 style="margin-top:3rem" id="more-title">And more</h2>
+    <ul class="features" aria-labelledby="more-title">
+      <li><h3>Quick ask</h3><p>Press a hotkey in any app to ask one model a quick question in a small window.</p></li>
+      <li><h3>Create</h3><p>Make images with OpenAI or Gemini image models, side by side, using your own key.</p></li>
+      <li><h3>Library</h3><p>Keep the images, videos and documents you get from AI in one place, with folders and tags.</p></li>
+      <li><h3>Prompts and personas</h3><p>Save prompts with blanks to fill in, and personas with their own instructions and models.</p></li>
+      <li><h3>Projects and History</h3><p>File your work by project. Every comparison is saved and searchable. You can import your ChatGPT and Claude chat exports too.</p></li>
+      <li><h3>Documents</h3><p>Ask models about your own files, with optional search by meaning that runs on your PC.</p></li>
+      <li><h3>Voice</h3><p>Voice typing with a Whisper model that runs locally, and answers read aloud with Windows voices.</p></li>
+      <li><h3>Backup and sync</h3><p>Back up and restore your data, and sync it, encrypted, between your own PCs.</p></li>
+      <li><h3>Code preview</h3><p>Open HTML and SVG code from an answer in a sealed, offline preview window.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <h2 id="privacy-title">Your data stays on your PC</h2>
+    <ul class="facts">
+      <li>Your history, library, prompts and documents are stored on your PC. There’s no sAInmore account and no sAInmore server.</li>
+      <li>No telemetry, no tracking, no ads.</li>
+      <li>API keys are encrypted by Windows and only sent to the provider they belong to.</li>
+      <li>The app checks GitHub for a new version once a day. You can turn this off.</li>
+      <li>Feedback is only sent when you choose to send it.</li>
+      <li>It uses the official AI websites and official APIs only. It doesn’t scrape websites or type into them for you.</li>
+    </ul>
+    <p>When you use an AI service, what you send goes to that service under its own terms. <a href="privacy.html">Full privacy notice</a></p>
+  </div>
+</section>
+
+<section class="section download" id="download" aria-labelledby="download-title">
+  <div class="wrap">
+    <h2 id="download-title">Download <span class="beta">Free beta</span></h2>
+    <p class="intro">For Windows 10 and 11, 64-bit (tested on Windows 11). Both files are on the release page on GitHub.</p>
+    <div class="files">
+      <div class="file">
+        <code>sAInmore-Setup-<span aria-label="version">…</span>.exe</code>
+        <span>Installer</span>
+        <p>Installs sAInmore with Start menu and desktop shortcuts. Recommended.</p>
+      </div>
+      <div class="file">
+        <code>sAInmore-Portable-<span aria-label="version">…</span>.exe</code>
+        <span>Portable</span>
+        <p>Runs without installing, for example from a USB drive.</p>
+      </div>
+    </div>
+    <p><a class="btn" href="https://github.com/ionutmaxim-tech/brainsphere-releases/releases/latest" rel="noopener">Go to the latest release on GitHub</a></p>
+    <p class="small">The release page is in a repository named after the app’s former name, brAInsphere. Installed copies check it for updates, so it keeps that name.</p>
+
+    <div class="smartscreen" id="smartscreen">
+      <h3>Windows will show a warning. Here’s why.</h3>
+      <p>sAInmore isn’t code-signed yet. Code signing costs money each year and the app is a free beta. Because of that, Windows SmartScreen shows <strong>“Windows protected your PC”</strong> the first time you run it. To continue:</p>
+      <ol>
+        <li>Click <strong>More info</strong>.</li>
+        <li>Check that the file name is <code>sAInmore-Setup-…exe</code> or <code>sAInmore-Portable-…exe</code>.</li>
+        <li>Click <strong>Run anyway</strong>.</li>
+      </ol>
+      <p>Only download sAInmore from the GitHub link on this page.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <h2 id="faq-title">Questions</h2>
+
+    <details>
+      <summary>Do I need API keys?</summary>
+      <div>
+        <p>No. The AI websites work with your normal sign-ins, including free accounts and subscriptions you already have.</p>
+        <p>API keys are only needed for Compare, Quick ask and Create. You can also use Compare with free local models through <a href="https://ollama.com" rel="noopener">Ollama</a>, without any key.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Does my ChatGPT Plus or Claude Pro subscription cover the API?</summary>
+      <div>
+        <p>No. Website subscriptions and API billing are separate. Compare and Quick ask use your own API keys, and each provider bills you directly. sAInmore shows an estimated cost under each answer; your provider’s billing page has the exact amount.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Is it free?</summary>
+      <div>
+        <p>Yes, sAInmore is free during the beta. The only costs are the ones you choose: AI subscriptions and API usage, paid to the providers.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Why does Windows warn me when I run it?</summary>
+      <div>
+        <p>Because the app isn’t code-signed yet. Click <strong>More info</strong>, then <strong>Run anyway</strong>. <a href="#smartscreen">More about this</a>.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Does sAInmore read or send messages on the AI websites?</summary>
+      <div>
+        <p>No. The websites run in their own isolated windows inside the app. sAInmore doesn’t read what’s on them, type into them or send for you. To ask several models automatically, Compare uses the providers’ official APIs.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Which AI services can I add?</summary>
+      <div>
+        <p>Only AI services. Besides the eight built-in ones, you can add services from a reviewed list in the app. sAInmore doesn’t open general websites.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Is there a Mac or Linux version?</summary>
+      <div>
+        <p>Not at the moment. sAInmore is for Windows 10 and 11, 64-bit.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>Wasn’t it called brAInsphere?</summary>
+      <div>
+        <p>Yes, until October 2026. Installing sAInmore over brAInsphere keeps your data, settings and website sign-ins.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>How do I report a problem or suggest something?</summary>
+      <div>
+        <p>Use <strong>Feedback</strong> in the app’s sidebar. You decide what to include, and nothing is sent until you choose to send it.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="row">
+      <span><span class="wordmark">s<span class="ai">AI</span>nmore</span> · super AI &amp; more</span>
+      <a href="privacy.html">Privacy</a>
+    </div>
+    <p>sAInmore isn’t affiliated with, endorsed by or sponsored by OpenAI, Anthropic, Google, Microsoft, Mistral AI, DeepSeek, xAI or Perplexity. ChatGPT, Claude, Gemini, Copilot, Le Chat, DeepSeek, Grok, Perplexity and other names are trademarks of their respective owners and are used here only to describe which services the app works with.</p>
+    <p>This site uses no cookies, no analytics and no third-party content. © 2026 sAInmore.</p>
+  </div>
+</footer>
+</body>
+</html>
