@@ -1,0 +1,7 @@
+# Screenshot drop folder from the app chat (raw PNGs; the site uses the WebP copies in img/)
+_from-app/
+LAUNCH.md
+_next-*/
+_for-app/
+CLAUDE.md
+_tools/

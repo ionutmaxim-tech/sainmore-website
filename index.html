@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="fonts/AtkinsonHyperlegibleNext-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/site.css">
-<meta property="og:title" content="sAInmore: super AI & more">
+<meta property="og:title" content="sAInmore: one workspace, every AI">
 <meta property="og:description" content="One question, several AI answers side by side. A free Windows app (beta).">
 <meta property="og:url" content="https://sainmore.com/">
 <meta property="og:type" content="website">
@@ -24,8 +24,8 @@
 <body>
 <!--
   FACTS USED ON THIS PAGE (check against RELEASE-0.7.0.md before each release):
-  - Version described: 0.8.0 (published 2026-10-28; 0.7.0 was the first named sAInmore). Windows 10/11, 64-bit. Free during the beta (paid plan is in the code but switched off: do not publish prices until the user says so). Not code-signed.
-  - Download: https://github.com/ionutmaxim-tech/brainsphere-releases/releases/latest
+  - Version described: 0.8.1 (published 2026-10-29 in brainsphere-releases; new cube logo, tagline, one-click updates, tour, Features page). Windows 10/11, 64-bit. Free during the beta (paid plan switched off). Not code-signed.
+  - Download: https://github.com/ionutmaxim-tech/brainsphere-releases/releases/latest (switch to sainmore-releases once it has releases)
     Files: sAInmore-Setup-<version>.exe, sAInmore-Portable-<version>.exe
 -->
 <a class="skip" href="#main">Skip to content</a>
@@ -34,7 +34,7 @@
   <div class="wrap">
     <a class="brand" href="./" aria-label="sAInmore home">
       <img src="img/logo.svg" alt="" width="40" height="40">
-      <span class="wordmark">s<span class="ai">AI</span>nmore</span>
+      <span class="wordmark"><span class="nm">s</span><span class="ai">AI</span><span class="nm">nmore</span></span>
     </a>
     <nav class="site-nav" aria-label="Main">
       <a class="opt" href="#features">Features</a>
@@ -49,9 +49,19 @@
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
-    <p class="name-line"><span class="wordmark">s<span class="ai">AI</span>nmore</span> · super AI &amp; more · <span class="beta">Free beta</span></p>
-    <h1 id="hero-title">One question. Several answers, side by side.</h1>
-    <p class="lede">A Windows app for people who use more than one AI. Open the official AI websites in split screen, or ask several models the same question at once and compare what they say.</p>
+    <div class="welcome">
+      <picture class="welcome-logo">
+        <source media="(prefers-reduced-motion: reduce)" srcset="img/logo.svg">
+        <img id="hero-logo" src="img/logo-animated.svg" data-still="img/logo.svg" data-moving="img/logo-animated.svg" width="196" height="196" alt="">
+      </picture>
+      <h1 id="hero-title">
+        <span class="welcome-to">Welcome to</span>
+        <span class="wordmark big"><span class="nm">s</span><span class="ai">AI</span><span class="nm">nmore</span></span>
+      </h1>
+      <p class="tagline">One workspace. <span class="every">Every AI.</span></p>
+      <button type="button" class="motion-toggle" id="motion-toggle" hidden aria-pressed="false">Pause animation</button>
+    </div>
+    <p class="lede"><strong>One question, several answers, side by side.</strong> A Windows app for people who use more than one AI. Open the official AI websites in split screen, or ask several models the same question at once and compare what they say. <span class="beta">Free beta</span></p>
     <div class="cta">
       <a class="btn" href="#download">Download for Windows</a>
       <span class="meta">Windows 10 and 11, 64-bit · free during the beta</span>
@@ -132,6 +142,8 @@
       <li><h3>Voice</h3><p>Voice typing with a Whisper model that runs locally, and answers read aloud with Windows voices.</p></li>
       <li><h3>Backup and sync</h3><p>Back up and restore your data, and sync it, encrypted, between your own PCs.</p></li>
       <li><h3>Code preview</h3><p>Open HTML and SVG code from an answer in a sealed, offline preview window.</p></li>
+      <li><h3>One-click updates</h3><p>When a new version is out, click Update now, then Restart to update. Your data stays. The download is checked against GitHub’s copy, and nothing installs until you click.</p></li>
+      <li><h3>Features page and tour</h3><p>Every feature in one searchable list (F1), and a skippable one-minute tour after installing.</p></li>
     </ul>
   </div>
 </section>
@@ -143,7 +155,7 @@
       <li>Your history, library, prompts and documents are stored on your PC. There’s no sAInmore account and no sAInmore server.</li>
       <li>No telemetry, no tracking, no ads.</li>
       <li>API keys are encrypted by Windows and only sent to the provider they belong to.</li>
-      <li>The app checks GitHub for a new version once a day. You can turn this off.</li>
+      <li>The app checks GitHub for a new version when it starts and every 6 hours while it runs. Nothing is downloaded or installed until you click Update now.</li>
       <li>Feedback is only sent when you choose to send it.</li>
       <li>It uses the official AI websites and official APIs only. It doesn’t scrape websites or type into them for you.</li>
     </ul>
@@ -168,7 +180,7 @@
       </div>
     </div>
     <p><a class="btn" href="https://github.com/ionutmaxim-tech/brainsphere-releases/releases/latest" rel="noopener">Go to the latest release on GitHub</a></p>
-    <p class="small">The release page is in a repository named after the app’s former name, brAInsphere. Installed copies check it for updates, so it keeps that name.</p>
+    <p class="small">The release page is in a repository named after the app’s former name, brAInsphere. Installed copies up to 0.8.0 check it for updates, so it keeps that name.</p>
 
     <div class="smartscreen" id="smartscreen">
       <h3>Windows will show a warning. Here’s why.</h3>
@@ -265,5 +277,19 @@
     <p>This site uses no cookies, no analytics and no third-party content. © 2026 sAInmore.</p>
   </div>
 </footer>
+<script>
+/* Lets visitors stop the logo animation (WCAG 2.2.2). No other script on this site. */
+(function () {
+  var img = document.getElementById('hero-logo'), btn = document.getElementById('motion-toggle');
+  if (!img || !btn || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  btn.hidden = false;
+  btn.addEventListener('click', function () {
+    var paused = btn.getAttribute('aria-pressed') === 'true';
+    img.src = paused ? img.dataset.moving : img.dataset.still;
+    btn.setAttribute('aria-pressed', String(!paused));
+    btn.textContent = paused ? 'Pause animation' : 'Play animation';
+  });
+})();
+</script>
 </body>
 </html>
