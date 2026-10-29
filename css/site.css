@@ -169,7 +169,7 @@ strong { font-weight: 700; }
 .motion-toggle:hover { color: var(--ink); border-color: var(--accent-line); }
 .hero .lede { margin: 2rem auto 0; text-align: center; }
 .hero .lede strong { color: var(--ink); }
-.hero .cta { justify-content: center; }
+.hero .cta { justify-content: center; text-align: center; }
 @media (max-width: 420px) {
   .welcome-to, .tagline { letter-spacing: 0.24em; margin-right: -0.24em; }
 }
