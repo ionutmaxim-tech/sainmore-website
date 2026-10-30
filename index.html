@@ -24,10 +24,10 @@
 <body>
 <!--
   FACTS USED ON THIS PAGE (check against the latest RELEASE-*.md before each release):
-  - The version number is written in four places: next to both Download buttons (hero, and #download with the date) and in both file names in #download. Update all four on every release. The SmartScreen steps keep "…" on purpose.
-  - Version described: 0.8.1 (published 2026-10-29 in sainmore-releases, and in brainsphere-releases for copies up to 0.8.0; new cube logo, tagline, one-click updates, tour, Features page). Windows 10/11, 64-bit. Free during the beta (paid plan switched off). Not code-signed.
+  - The version number is written in three places: next to both Download buttons (hero, and #download with the date) and in the file name in #download. Update all three on every release. The SmartScreen steps keep "…" on purpose.
+  - Version described: 0.8.2 (published 2026-10-30 in sainmore-releases; brighter cube logo, one-click updates, tour, Features page). Windows 10/11, 64-bit. Installs for the current Windows account, without admin rights. Free during the beta (paid plan switched off). Not code-signed.
   - Download: https://github.com/ionutmaxim-tech/sainmore-releases/releases/latest (0.8.1 and later check this repo for updates)
-    Files: sAInmore-Setup-<version>.exe, sAInmore-Portable-<version>.exe
+    File: sAInmore-Setup-<version>.exe only. The portable version is retired from 0.8.2 (RELEASE-0.8.2.md Part 1).
 -->
 <a class="skip" href="#main">Skip to content</a>
 
@@ -65,7 +65,7 @@
     <p class="lede"><strong>One question, several answers, side by side.</strong> A Windows app for people who use more than one AI. Open the official AI websites in split screen, or ask several models the same question at once and compare what they say. <span class="beta">Free beta</span></p>
     <div class="cta">
       <a class="btn" href="#download">Download for Windows</a>
-      <span class="meta">Latest version 0.8.1 · Windows 10 and 11, 64-bit · free during the beta</span>
+      <span class="meta">Latest version 0.8.2 · Windows 10 and 11, 64-bit · free during the beta</span>
     </div>
 
     <figure class="split">
@@ -167,22 +167,17 @@
 <section class="section download" id="download" aria-labelledby="download-title">
   <div class="wrap">
     <h2 id="download-title">Download <span class="beta">Free beta</span></h2>
-    <p class="intro">For Windows 10 and 11, 64-bit (tested on Windows 11). Both files are on the release page on GitHub.</p>
+    <p class="intro">For Windows 10 and 11, 64-bit (tested on Windows 11). The installer is on the release page on GitHub.</p>
     <div class="files">
       <div class="file">
-        <code>sAInmore-Setup-0.8.1.exe</code>
+        <code>sAInmore-Setup-0.8.2.exe</code>
         <span>Installer</span>
-        <p>Installs sAInmore with Start menu and desktop shortcuts. Recommended.</p>
-      </div>
-      <div class="file">
-        <code>sAInmore-Portable-0.8.1.exe</code>
-        <span>Portable</span>
-        <p>Runs without installing, for example from a USB drive.</p>
+        <p>Installs sAInmore for your Windows account, without admin rights, with Start menu and desktop shortcuts. Later versions install with one click from inside the app.</p>
       </div>
     </div>
     <div class="cta">
       <a class="btn" href="https://github.com/ionutmaxim-tech/sainmore-releases/releases/latest" rel="noopener">Go to the latest release on GitHub</a>
-      <span class="meta">Latest version 0.8.1, released 29 October 2026</span>
+      <span class="meta">Latest version 0.8.2, released 30 October 2026</span>
     </div>
 
     <div class="smartscreen" id="smartscreen">
@@ -190,7 +185,7 @@
       <p>sAInmore isn’t code-signed yet. Code signing costs money each year and the app is a free beta. Because of that, Windows SmartScreen shows <strong>“Windows protected your PC”</strong> the first time you run it. To continue:</p>
       <ol>
         <li>Click <strong>More info</strong>.</li>
-        <li>Check that the file name is <code>sAInmore-Setup-…exe</code> or <code>sAInmore-Portable-…exe</code>.</li>
+        <li>Check that the file name is <code>sAInmore-Setup-…exe</code>.</li>
         <li>Click <strong>Run anyway</strong>.</li>
       </ol>
       <p>Only download sAInmore from the GitHub link on this page.</p>
@@ -228,6 +223,13 @@
       <summary>Why does Windows warn me when I run it?</summary>
       <div>
         <p>Because the app isn’t code-signed yet. Click <strong>More info</strong>, then <strong>Run anyway</strong>. <a href="#smartscreen">More about this</a>.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>What happened to the portable version?</summary>
+      <div>
+        <p>It’s retired from version 0.8.2, because it couldn’t update itself. If you used it, install with Setup: it uses the same data folder, so everything is still there.</p>
       </div>
     </details>
 
