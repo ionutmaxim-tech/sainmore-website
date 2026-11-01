@@ -25,7 +25,7 @@
 <!--
   FACTS USED ON THIS PAGE (check against the latest RELEASE-*.md before each release):
   - The version number is written in three places: next to both Download buttons (hero, and #download with the date) and in the file name in #download. Update all three on every release. The SmartScreen steps keep "…" on purpose.
-  - Version described: 0.8.5 (published 2026-10-31 18:15 UTC in sainmore-releases, tag v0.8.5 on cf04d5d; the toolbar × closes the tab and Ctrl+Shift+T reopens it, full screen has a × and the sidebar slides in from the left edge, the bottom button is Menu, safer sign-in windows; logo and icons unchanged since 0.8.3. Source: RELEASE-0.8.5.md Part 1). Built on 0.8.4 (tag v0.8.4 on 3a9ac3d; full-screen button next to Downloads in Workspace and Webspace, safety fixes, Electron 44.10.1; logo and icons unchanged since 0.8.3. Source: RELEASE-0.8.4.md Part 1). Built on 0.8.3 (tag v0.8.3 on 130ec0f; Webspace (Ctrl+3) for any https website, Usage, Language menu, Projects at the top of the sidebar, split-screen layouts picked from the sidebar (presets removed), bottom menu; the Workspace stays AI-only; orange-sided cube logo, app icon is the cube alone (copied from tag v0.8.3). Source: RELEASE-0.8.3.md Part 1). Windows 10/11, 64-bit. Installs for the current Windows account, without admin rights. Free during the beta (paid plan switched off). Not code-signed.
+  - Version described: 0.8.6 (published 2026-11-01 01:17 UTC in sainmore-releases, tag v0.8.6 on 541970a; Write with AI and Improve with AI in Prompts (a model the user picks or a local model, nothing sent until the button), starter prompts, guided builder, guides, tips; LM Studio as a second local provider at 127.0.0.1:1234; sleeping tabs after 30 minutes; fuller app icon (favicons from tag v0.8.6; logo.svg and logo-animated.svg unchanged since v0.8.3); Ollama cloud models run on ollama.com (FEATURES.md line 142). Source: RELEASE-0.8.6.md Part 1, app-to-website 2026-11-01 01:18). Built on 0.8.5 (tag v0.8.5 on cf04d5d; the toolbar × closes the tab and Ctrl+Shift+T reopens it, full screen has a × and the sidebar slides in from the left edge, the bottom button is Menu, safer sign-in windows; logo and icons unchanged since 0.8.3. Source: RELEASE-0.8.5.md Part 1). Built on 0.8.4 (tag v0.8.4 on 3a9ac3d; full-screen button next to Downloads in Workspace and Webspace, safety fixes, Electron 44.10.1; logo and icons unchanged since 0.8.3. Source: RELEASE-0.8.4.md Part 1). Built on 0.8.3 (tag v0.8.3 on 130ec0f; Webspace (Ctrl+3) for any https website, Usage, Language menu, Projects at the top of the sidebar, split-screen layouts picked from the sidebar (presets removed), bottom menu; the Workspace stays AI-only; orange-sided cube logo, app icon is the cube alone (copied from tag v0.8.3). Source: RELEASE-0.8.3.md Part 1). Windows 10/11, 64-bit. Installs for the current Windows account, without admin rights. Free during the beta (paid plan switched off). Not code-signed.
   - Download: https://github.com/ionutmaxim-tech/sainmore-releases/releases/latest (0.8.1 and later check this repo for updates)
     File: sAInmore-Setup-<version>.exe only. The portable version is retired from 0.8.2 (RELEASE-0.8.2.md Part 1).
 -->
@@ -65,7 +65,7 @@
     <p class="lede"><strong>One question, several answers, side by side.</strong> A Windows app for people who use more than one AI. Open the official AI websites in split screen, or ask several models the same question at once and compare what they say. <span class="beta">Free beta</span></p>
     <div class="cta">
       <a class="btn" href="#download">Download for Windows</a>
-      <span class="meta">Latest version 0.8.5 · Windows 10 and 11, 64-bit · free during the beta</span>
+      <span class="meta">Latest version 0.8.6 · Windows 10 and 11, 64-bit · free during the beta</span>
     </div>
 
     <figure class="split">
@@ -101,12 +101,13 @@
           <li>Use voice mode on the AI websites. Each site asks before it can use your microphone.</li>
           <li>Pick a split-screen layout from the sidebar with one click.</li>
           <li>Close a tab with the × in its toolbar, as in a browser. Ctrl+Shift+T brings it back.</li>
+          <li>Tabs you haven’t used for 30 minutes sleep to free memory, and reload when you click them.</li>
           <li>Go full screen with one click (the button at the top right): the AI websites side by side, nothing else on screen. Move the mouse to the left edge for the sidebar.</li>
         </ul>
       </div>
       <div>
         <h3>Compare, through the official APIs</h3>
-        <p>Type one question and send it to several models together, using your own OpenAI, Anthropic or Google Gemini keys, or free local models through Ollama.</p>
+        <p>Type one question and send it to several models together, using your own OpenAI, Anthropic or Google Gemini keys, or free local models through Ollama or LM Studio.</p>
         <ul>
           <li>Answers stream in side by side, with a <strong>differences</strong> view.</li>
           <li>Ask follow-up questions; each model keeps its own conversation.</li>
@@ -136,10 +137,10 @@
 
     <h2 style="margin-top:3rem" id="more-title">And more</h2>
     <ul class="features" aria-labelledby="more-title">
+      <li><h3>Prompts, written and improved with AI</h3><p>Describe a task, and a model you choose writes a reusable prompt with blanks. Or improve your own: both side by side, with each change and its reason. Use your API models or a free local model; nothing is sent until you press the button. Plus starter prompts, a guided builder, short guides, tips as you type, and personas with their own instructions and models.</p></li>
       <li><h3>Quick ask</h3><p>Press a hotkey in any app to ask one model a quick question in a small window.</p></li>
       <li><h3>Create</h3><p>Make images with OpenAI or Gemini image models, side by side, using your own key.</p></li>
       <li><h3>Library</h3><p>Keep the images, videos and documents you get from AI in one place, with folders and tags.</p></li>
-      <li><h3>Prompts and personas</h3><p>Save prompts with blanks to fill in, and personas with their own instructions and models.</p></li>
       <li><h3>Webspace</h3><p>Any other website, in its own tabs and split screen, next to the AI services (Ctrl+3). Type an address, or words to search with DuckDuckGo. Check the address bar before you sign in.</p></li>
       <li><h3>Projects and History</h3><p>File your work by project, from the top of the sidebar. Every comparison is saved and searchable. You can import your ChatGPT and Claude chat exports too.</p></li>
       <li><h3>Documents</h3><p>Ask models about your own files, with optional search by meaning that runs on your PC.</p></li>
@@ -173,14 +174,14 @@
     <p class="intro">For Windows 10 and 11, 64-bit (tested on Windows 11). The installer is on the release page on GitHub.</p>
     <div class="files">
       <div class="file">
-        <code>sAInmore-Setup-0.8.5.exe</code>
+        <code>sAInmore-Setup-0.8.6.exe</code>
         <span>Installer</span>
         <p>Installs sAInmore for your Windows account, without admin rights, with Start menu and desktop shortcuts. Later versions install with one click from inside the app.</p>
       </div>
     </div>
     <div class="cta">
       <a class="btn" href="https://github.com/ionutmaxim-tech/sainmore-releases/releases/latest" rel="noopener">Go to the latest release on GitHub</a>
-      <span class="meta">Latest version 0.8.5, released 31 October 2026</span>
+      <span class="meta">Latest version 0.8.6, released 1 November 2026</span>
     </div>
 
     <div class="smartscreen" id="smartscreen">
@@ -204,7 +205,7 @@
       <summary>Do I need API keys?</summary>
       <div>
         <p>No. The AI websites work with your normal sign-ins, including free accounts and subscriptions you already have.</p>
-        <p>API keys are only needed for Compare, Quick ask and Create. You can also use Compare with free local models through <a href="https://ollama.com" rel="noopener">Ollama</a>, without any key.</p>
+        <p>API keys are only needed for Compare, Quick ask, Create and writing prompts with AI. You can also use Compare and Write with AI with free local models through <a href="https://ollama.com" rel="noopener">Ollama</a> or <a href="https://lmstudio.ai" rel="noopener">LM Studio</a>, without any key.</p>
       </div>
     </details>
 
