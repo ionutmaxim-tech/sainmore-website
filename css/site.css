@@ -362,7 +362,6 @@ strong { font-weight: 700; }
 .doc li { margin: 0.35rem 0; }
 
 @media (prefers-reduced-motion: no-preference) {
-  html { scroll-behavior: smooth; }
   .btn { transition: filter 0.15s ease, border-color 0.15s ease; }
 }
 
