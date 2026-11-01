@@ -25,7 +25,7 @@
 <!--
   FACTS USED ON THIS PAGE (check against the latest RELEASE-*.md before each release):
   - The version number is written in three places: next to both Download buttons (hero, and #download with the date) and in the file name in #download. Update all three on every release. The SmartScreen steps keep "…" on purpose.
-  - Version described: 0.8.7 (published 2026-11-01 05:42 UTC in sainmore-releases, tag v0.8.7 on 7e1c288; a fix release: search by meaning and voice typing work after a restart again; no icon, logo, wording or privacy change. Source: API check and app-to-website 2026-11-01 05:43). Built on 0.8.6 (published 2026-11-01 01:17 UTC in sainmore-releases, tag v0.8.6 on 541970a; Write with AI and Improve with AI in Prompts (a model the user picks or a local model, nothing sent until the button), starter prompts, guided builder, guides, tips; LM Studio as a second local provider at 127.0.0.1:1234; sleeping tabs after 30 minutes; fuller app icon (favicons from tag v0.8.6; logo.svg and logo-animated.svg unchanged since v0.8.3); Ollama cloud models run on ollama.com (FEATURES.md line 142). Source: RELEASE-0.8.6.md Part 1, app-to-website 2026-11-01 01:18). Built on 0.8.5 (tag v0.8.5 on cf04d5d; the toolbar × closes the tab and Ctrl+Shift+T reopens it, full screen has a × and the sidebar slides in from the left edge, the bottom button is Menu, safer sign-in windows; logo and icons unchanged since 0.8.3. Source: RELEASE-0.8.5.md Part 1). Built on 0.8.4 (tag v0.8.4 on 3a9ac3d; full-screen button next to Downloads in Workspace and Webspace, safety fixes, Electron 44.10.1; logo and icons unchanged since 0.8.3. Source: RELEASE-0.8.4.md Part 1). Built on 0.8.3 (tag v0.8.3 on 130ec0f; Webspace (Ctrl+3) for any https website, Usage, Language menu, Projects at the top of the sidebar, split-screen layouts picked from the sidebar (presets removed), bottom menu; the Workspace stays AI-only; orange-sided cube logo, app icon is the cube alone (copied from tag v0.8.3). Source: RELEASE-0.8.3.md Part 1). Windows 10/11, 64-bit. Installs for the current Windows account, without admin rights. Free during the beta (paid plan switched off). Not code-signed.
+  - Version described: 0.8.8 (published 2026-11-01 05:55 UTC in sainmore-releases, tag v0.8.8 on 5bed2e8; six more API providers: Mistral, xAI (Grok), DeepSeek, Groq, Moonshot (Kimi), Perplexity, with data-location notices from src/shared/compare.ts; Translator and Summariser (Tools) and Webspace Summarise: https only, no cookies, no local addresses (src/shared/text-tools.ts, src/main/tools/page-fetch.ts), token counts only when Save history is on (history-service.ts recordToolUsage); 18 colour themes and 8 backgrounds; Spending line; logo and icons unchanged. Source: RELEASE-0.8.8.md Part 1, app-to-website 2026-11-01 05:56). Built on 0.8.7 (published 2026-11-01 05:42 UTC in sainmore-releases, tag v0.8.7 on 7e1c288; a fix release: search by meaning and voice typing work after a restart again; no icon, logo, wording or privacy change. Source: API check and app-to-website 2026-11-01 05:43). Built on 0.8.6 (published 2026-11-01 01:17 UTC in sainmore-releases, tag v0.8.6 on 541970a; Write with AI and Improve with AI in Prompts (a model the user picks or a local model, nothing sent until the button), starter prompts, guided builder, guides, tips; LM Studio as a second local provider at 127.0.0.1:1234; sleeping tabs after 30 minutes; fuller app icon (favicons from tag v0.8.6; logo.svg and logo-animated.svg unchanged since v0.8.3); Ollama cloud models run on ollama.com (FEATURES.md line 142). Source: RELEASE-0.8.6.md Part 1, app-to-website 2026-11-01 01:18). Built on 0.8.5 (tag v0.8.5 on cf04d5d; the toolbar × closes the tab and Ctrl+Shift+T reopens it, full screen has a × and the sidebar slides in from the left edge, the bottom button is Menu, safer sign-in windows; logo and icons unchanged since 0.8.3. Source: RELEASE-0.8.5.md Part 1). Built on 0.8.4 (tag v0.8.4 on 3a9ac3d; full-screen button next to Downloads in Workspace and Webspace, safety fixes, Electron 44.10.1; logo and icons unchanged since 0.8.3. Source: RELEASE-0.8.4.md Part 1). Built on 0.8.3 (tag v0.8.3 on 130ec0f; Webspace (Ctrl+3) for any https website, Usage, Language menu, Projects at the top of the sidebar, split-screen layouts picked from the sidebar (presets removed), bottom menu; the Workspace stays AI-only; orange-sided cube logo, app icon is the cube alone (copied from tag v0.8.3). Source: RELEASE-0.8.3.md Part 1). Windows 10/11, 64-bit. Installs for the current Windows account, without admin rights. Free during the beta (paid plan switched off). Not code-signed.
   - Download: https://github.com/ionutmaxim-tech/sainmore-releases/releases/latest (0.8.1 and later check this repo for updates)
     File: sAInmore-Setup-<version>.exe only. The portable version is retired from 0.8.2 (RELEASE-0.8.2.md Part 1).
 -->
@@ -64,7 +64,7 @@
     <p class="lede"><strong>One question, several answers, side by side.</strong> A Windows app for people who use more than one AI. Open the official AI websites in split screen, or ask several models the same question at once and compare what they say. <span class="beta">Free beta</span></p>
     <div class="cta">
       <a class="btn" href="#download">Download for Windows</a>
-      <span class="meta">Latest version 0.8.7 · Windows 10 and 11, 64-bit · free during the beta</span>
+      <span class="meta">Latest version 0.8.8 · Windows 10 and 11, 64-bit · free during the beta</span>
     </div>
 
     <figure class="split">
@@ -106,13 +106,13 @@
       </div>
       <div>
         <h3>Compare, through the official APIs</h3>
-        <p>Type one question and send it to several models together, using your own OpenAI, Anthropic or Google Gemini keys, or free local models through Ollama or LM Studio.</p>
+        <p>Type one question and send it to several models together, using your own keys for OpenAI, Anthropic, Google Gemini, Mistral, xAI (Grok), DeepSeek, Groq, Moonshot (Kimi) or Perplexity, or free local models through Ollama or LM Studio. The app says where each provider keeps your data.</p>
         <ul>
           <li>Answers stream in side by side, with a <strong>differences</strong> view.</li>
           <li>Ask follow-up questions; each model keeps its own conversation.</li>
           <li><strong>Blind vote</strong>: pick the best answer before you see who wrote it, and build your own leaderboard.</li>
           <li>Optional AI judge, cost estimates, and a gauge showing how full each model’s context is.</li>
-          <li>A Usage screen with tokens and estimated cost per model and per day.</li>
+          <li>A Usage screen with tokens and estimated cost per model and per day, and this month’s estimated spending in the sidebar.</li>
           <li>Export any comparison as a PDF, Markdown or JSON file.</li>
           <li>Web search and built-in tools when you want them.</li>
         </ul>
@@ -137,6 +137,8 @@
     <h2 style="margin-top:3rem" id="more-title">And more</h2>
     <ul class="features" aria-labelledby="more-title">
       <li><h3>Prompts, written and improved with AI</h3><p>Describe a task, and a model you choose writes a reusable prompt with blanks. Or improve your own: both side by side, with each change and its reason. Use your API models or a free local model; nothing is sent until you press the button. Plus starter prompts, a guided builder, short guides, tips as you type, and personas with their own instructions and models.</p></li>
+      <li><h3>Translator and Summariser</h3><p>Translate with any of your models, free and private with one on your PC. Paste a web address to read a summary, then ask about the page. In Webspace, Summarise reads the page you have open.</p></li>
+      <li><h3>Colours</h3><p>18 colour themes and 8 background colours, in light and dark.</p></li>
       <li><h3>Quick ask</h3><p>Press a hotkey in any app to ask one model a quick question in a small window.</p></li>
       <li><h3>Create</h3><p>Make images with OpenAI or Gemini image models, side by side, using your own key.</p></li>
       <li><h3>Library</h3><p>Keep the images, videos and documents you get from AI in one place, with folders and tags.</p></li>
@@ -161,7 +163,7 @@
       <li>API keys are encrypted by Windows and only sent to the provider they belong to.</li>
       <li>The app checks GitHub for a new version when it starts and every 6 hours while it runs. Nothing is downloaded or installed until you click Update now. You can turn the check off in Settings → About.</li>
       <li>Feedback is only sent when you choose to send it.</li>
-      <li>It uses the official AI websites and official APIs. It doesn’t scrape websites or type into them for you. Other websites open only in Webspace, when you choose them.</li>
+      <li>It uses the official AI websites and official APIs. It doesn’t scrape websites or type into them for you; the Summariser reads only a page you ask it to. Other websites open only in Webspace, when you choose them.</li>
     </ul>
     <p>When you use an AI service, what you send goes to that service under its own terms. <a href="privacy.html">Full privacy notice</a></p>
   </div>
@@ -173,14 +175,14 @@
     <p class="intro">For Windows 10 and 11, 64-bit (tested on Windows 11). The installer is on the release page on GitHub.</p>
     <div class="files">
       <div class="file">
-        <code>sAInmore-Setup-0.8.7.exe</code>
+        <code>sAInmore-Setup-0.8.8.exe</code>
         <span>Installer</span>
         <p>Installs sAInmore for your Windows account, without admin rights, with Start menu and desktop shortcuts. Later versions install with one click from inside the app.</p>
       </div>
     </div>
     <div class="cta">
       <a class="btn" href="https://github.com/ionutmaxim-tech/sainmore-releases/releases/latest" rel="noopener">Go to the latest release on GitHub</a>
-      <span class="meta">Latest version 0.8.7, released 1 November 2026</span>
+      <span class="meta">Latest version 0.8.8, released 1 November 2026</span>
     </div>
 
     <div class="smartscreen" id="smartscreen">
@@ -204,7 +206,7 @@
       <summary>Do I need API keys?</summary>
       <div>
         <p>No. The AI websites work with your normal sign-ins, including free accounts and subscriptions you already have.</p>
-        <p>API keys are only needed for Compare, Quick ask, Create and writing prompts with AI. You can also use Compare and Write with AI with free local models through <a href="https://ollama.com" rel="noopener">Ollama</a> or <a href="https://lmstudio.ai" rel="noopener">LM Studio</a>, without any key.</p>
+        <p>API keys are only needed for Compare, Quick ask, Create, the Translator and Summariser, and writing prompts with AI. You can also use Compare, Write with AI and the Tools with free local models through <a href="https://ollama.com" rel="noopener">Ollama</a> or <a href="https://lmstudio.ai" rel="noopener">LM Studio</a>, without any key.</p>
       </div>
     </details>
 
@@ -281,7 +283,7 @@
       <span><span class="wordmark">s<span class="ai">AI</span>nmore</span> · super AI &amp; more</span>
       <a href="privacy.html">Privacy</a>
     </div>
-    <p>sAInmore isn’t affiliated with, endorsed by or sponsored by OpenAI, Anthropic, Google, Microsoft, Mistral AI, DeepSeek, xAI or Perplexity. ChatGPT, Claude, Gemini, Copilot, Le Chat, DeepSeek, Grok, Perplexity and other names are trademarks of their respective owners and are used here only to describe which services the app works with.</p>
+    <p>sAInmore isn’t affiliated with, endorsed by or sponsored by OpenAI, Anthropic, Google, Microsoft, Mistral AI, DeepSeek, xAI, Groq, Moonshot AI or Perplexity. ChatGPT, Claude, Gemini, Copilot, Le Chat, DeepSeek, Grok, Perplexity and other names are trademarks of their respective owners and are used here only to describe which services the app works with.</p>
     <p>This site uses no cookies, no analytics and no third-party content. © 2026 sAInmore.</p>
   </div>
 </footer>
