@@ -53,14 +53,13 @@
     <div class="welcome">
       <picture class="welcome-logo">
         <source media="(prefers-reduced-motion: reduce)" srcset="img/logo.svg">
-        <img id="hero-logo" src="img/logo-animated.svg" data-still="img/logo.svg" data-moving="img/logo-animated.svg" width="196" height="196" alt="">
+        <img src="img/logo-animated.svg" width="196" height="196" alt="">
       </picture>
       <h1 id="hero-title">
         <span class="welcome-to">Welcome to</span>
         <span class="wordmark big"><span class="nm">s</span><span class="ai">AI</span><span class="nm">nmore</span></span>
       </h1>
       <p class="tagline">One workspace. <span class="every">Every AI.</span></p>
-      <button type="button" class="motion-toggle" id="motion-toggle" hidden aria-pressed="false">Pause animation</button>
     </div>
     <p class="lede"><strong>One question, several answers, side by side.</strong> A Windows app for people who use more than one AI. Open the official AI websites in split screen, or ask several models the same question at once and compare what they say. <span class="beta">Free beta</span></p>
     <div class="cta">
@@ -286,19 +285,5 @@
     <p>This site uses no cookies, no analytics and no third-party content. © 2026 sAInmore.</p>
   </div>
 </footer>
-<script>
-/* Lets visitors stop the logo animation (WCAG 2.2.2). No other script on this site. */
-(function () {
-  var img = document.getElementById('hero-logo'), btn = document.getElementById('motion-toggle');
-  if (!img || !btn || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  btn.hidden = false;
-  btn.addEventListener('click', function () {
-    var paused = btn.getAttribute('aria-pressed') === 'true';
-    img.src = paused ? img.dataset.moving : img.dataset.still;
-    btn.setAttribute('aria-pressed', String(!paused));
-    btn.textContent = paused ? 'Pause animation' : 'Play animation';
-  });
-})();
-</script>
 </body>
 </html>
