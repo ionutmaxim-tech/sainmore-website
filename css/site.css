@@ -141,6 +141,8 @@ strong { font-weight: 700; }
 }
 .wordmark .nm { color: var(--ink); }
 .wordmark .ai { color: var(--brand-ai-from); }
+/* The app's welcome screen (0.8.24): a small ".com" on the name's baseline that takes no width, so the name stays centred */
+.wordmark .com { display: inline-block; width: 0; overflow: visible; white-space: nowrap; margin-left: 0.125rem; font-size: 0.237em; line-height: 1; color: var(--ink-3); }
 .tagline .every { color: var(--brand-every-to); }
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
   .wordmark .nm, .wordmark .ai, .tagline .every {
