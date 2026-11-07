@@ -1,20 +1,6 @@
 /* sAInmore website: one stylesheet, no external requests.
-   Fonts: Atkinson Hyperlegible Next (text) and Audiowide (wordmark), both SIL OFL, self-hosted. */
+   Fonts: the app's own: Segoe UI Variable from Windows for text (nothing downloaded), Audiowide (SIL OFL, self-hosted) for the name and the sidebar. */
 
-@font-face {
-  font-family: "Atkinson Hyperlegible Next";
-  src: url("../fonts/AtkinsonHyperlegibleNext-wght.woff2") format("woff2");
-  font-weight: 200 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Atkinson Hyperlegible Next";
-  src: url("../fonts/AtkinsonHyperlegibleNext-Italic-wght.woff2") format("woff2");
-  font-weight: 200 800;
-  font-style: italic;
-  font-display: swap;
-}
 @font-face {
   font-family: "Audiowide";
   src: url("../fonts/audiowide-latin-400.woff2") format("woff2");
@@ -27,27 +13,33 @@
 :root {
   color-scheme: light dark;
 
-  --canvas: #f4f5f7;
-  --surface: #ffffff;
-  --surface-2: #eceef6;
-  --ink: #14161c;
-  --ink-2: #474c5c;
-  --ink-3: #5f6578;
-  --rule: #d9dcea;
+  --canvas: #f4f5f7;        /* app canvas */
+  --surface: #ffffff;       /* app surface */
+  --surface-2: #eef0f3;     /* app raised */
+  --overlay: #e4e7ec;       /* app overlay: the current sidebar item */
+  --ink: #16181d;           /* app fg */
+  --ink-2: #4b5563;         /* app fg-muted */
+  --ink-3: #5d6470;         /* app fg-subtle */
+  --rule: #e1e4ea;          /* app line */
+  --rule-strong: #cbd0d8;   /* app line-strong */
 
-  --accent: #1f5fd6;        /* blue from the 0.8.1 logo, darkened for 4.5:1 text on light */
-  --accent-line: #2f7bf6;
+  --accent: #4c5bd4;        /* app accent */
+  --accent-line: #4c5bd4;
   --peri: #7c6cf6;
-  --peri-soft: #e3ecff;
-  --ai: #0b7891;            /* cyan "AI" on light */
-  --amber: #d9750f;
+  --peri-soft: #e4e7ec;     /* = overlay, as the app highlights with overlay */
+  --ai: #0b7891;            /* app brand-ai on light */
+  --amber: #a86a06;         /* app warn */
   --amber-soft: #fff1d6;
 
-  --btn-bg: #1f5fd6;
-  --btn-ink: #ffffff;
-  --focus: #b8600a;
+  --btn-bg: #3f4fd0;        /* app accent-strong */
+  --btn-ink: #ffffff;       /* app on-accent */
+  --focus: #4c5bd4;         /* the app's focus ring is the accent */
+  --ok: #18864f;            /* app ok */
+  --well: color-mix(in srgb, #f4f5f7, black 7%);  /* app well */
 
-  --font: "Atkinson Hyperlegible Next", system-ui, "Segoe UI", sans-serif;
+  --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;  /* the app's --font-sans */
+  --font-display: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Cascadia Code", "Cascadia Mono", Consolas, ui-monospace, monospace;
   --brand: "Audiowide", var(--font);
 
   --measure: 68ch;
@@ -59,24 +51,28 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --canvas: #0b0d10;
-    --surface: #13161c;
-    --surface-2: #1a1e27;
-    --ink: #eef0f6;
-    --ink-2: #b9bed0;
-    --ink-3: #8c92a8;
-    --rule: #262b38;
+    --surface: #111419;
+    --surface-2: #171b21;
+    --overlay: #1e232b;
+    --ink: #e8eaed;
+    --ink-2: #9aa3ae;
+    --ink-3: #848d99;
+    --rule: #222730;
+    --rule-strong: #2f3540;
 
-    --accent: #7fb0ff;
-    --accent-line: #3f8bff;
+    --accent: #8e9dff;
+    --accent-line: #8e9dff;
     --peri: #7c6cf6;
-    --peri-soft: #14203a;
+    --peri-soft: #1e232b;
     --ai: #5fd3ee;
-    --amber: #ffd98a;
+    --amber: #e6b450;
     --amber-soft: #2a2213;
 
-    --btn-bg: #3f8bff;
-    --btn-ink: #0b0d10;
-    --focus: #ffd98a;
+    --btn-bg: #5c6cd6;
+    --btn-ink: #ffffff;
+    --focus: #8e9dff;
+    --ok: #4cc38a;
+    --well: color-mix(in srgb, #0b0d10, black 45%);
   }
 }
 
@@ -88,7 +84,7 @@ body {
   background: var(--canvas);
   color: var(--ink);
   font-family: var(--font);
-  font-size: 1.0625rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   overflow-x: hidden;
 }
