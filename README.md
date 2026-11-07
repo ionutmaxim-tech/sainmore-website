@@ -5,7 +5,7 @@ Static website for **sAInmore** (super AI & more), served by GitHub Pages.
 - Plain HTML + CSS, no JavaScript, no cookies, no external requests.
 - `index.html`: home page. `privacy.html`: privacy notice (site + app).
 - Facts on the pages must match the app's published release notes (`RELEASE-<version>.md` in the app project). The facts used are listed in a comment at the top of `index.html`.
-- Fonts: Atkinson Hyperlegible Next and Audiowide, both under the SIL Open Font License (`fonts/OFL-*.txt`).
+- Fonts: the text uses Windows' own Segoe UI Variable (nothing downloaded; elsewhere the system font). Audiowide, for the name and the sidebar, is self-hosted under the SIL Open Font License (`fonts/OFL-Audiowide.txt`).
 - `CNAME` holds the custom domain. `.nojekyll` tells GitHub Pages to serve the files as they are.
 - `_from-app/` is where the app chat drops screenshots; it and `LAUNCH.md` (launch checklist) are in `.gitignore`, so they are never published.
 - `404.html`, `robots.txt` and `sitemap.xml` are standard GitHub Pages extras.
