@@ -3,105 +3,144 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy · sAInmore</title>
-<meta name="description" content="How the sAInmore website and the sAInmore Windows app handle your data.">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f4f5f7" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b0d10" media="(prefers-color-scheme: dark)">
 <meta name="referrer" content="no-referrer">
-<link rel="canonical" href="https://sainmore.com/privacy.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="How the sAInmore website and the sAInmore Windows app handle your data.">
+<link rel="canonical" href="https://sainmore.com/privacy.html">
 <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/app.css">
+<title>Privacy · sAInmore</title>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2h8.5A1.5 1.5 0 0 1 21 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5z" /></symbol>
+  <symbol id="i-workspace" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5" /> <path d="M3 9h18" /> <path d="M7 6.5h.01M10 6.5h.01" /></symbol>
+  <symbol id="i-compare" viewBox="0 0 24 24"><rect x="3" y="4" width="7.5" height="16" rx="2" /> <rect x="13.5" y="4" width="7.5" height="16" rx="2" /> <path d="M5.5 9h2.5M5.5 12.5h2.5M16 9h2.5M16 12.5h2.5" /></symbol>
+  <symbol id="i-dna" viewBox="0 0 24 24"><path d="M7 3c0 4.6 10 5.4 10 9s-10 4.4-10 9" /> <path d="M17 3c0 4.6-10 5.4-10 9s10 4.4 10 9" /> <path d="M8.2 6h7.6M10 8.6h4M10 15.4h4M8.2 18h7.6" /></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5" /> <circle cx="9" cy="9.5" r="1.75" /> <path d="m21 16-5-5-8 9" /></symbol>
+  <symbol id="i-library" viewBox="0 0 24 24"><rect x="3.5" y="4" width="4" height="16" rx="1" /> <rect x="9.5" y="4" width="4" height="16" rx="1" /> <path d="m15.6 5.2 3.8-1 3.1 15.2-3.8 1z" /></symbol>
+  <symbol id="i-prompt" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v10a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 3.5V17h0A1.5 1.5 0 0 1 4 15.5z" /> <path d="M8 8.5l2.5 2-2.5 2M12.5 12.5H16" /></symbol>
+  <symbol id="i-persona" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.75" /> <path d="M4.5 20c.9-3.6 3.9-5.75 7.5-5.75s6.6 2.15 7.5 5.75" /></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z" /> <path d="M14 3v4h4" /></symbol>
+  <symbol id="i-language" viewBox="0 0 24 24"><path d="M3.5 5.5h9M8 3.5v2M10.5 5.5c-.8 3.6-3.2 6.4-6.5 8M6 8.5c1 2 2.8 3.7 5 4.8" /> <path d="m12.5 20.5 4-9.5 4 9.5M14 17h5" /></symbol>
+  <symbol id="i-summary" viewBox="0 0 24 24"><path d="M4 6h10M4 10h12M4 14h8M4 18h5" /> <path d="m18 13 .9 2.6 2.6.9-2.6.9L18 20l-.9-2.6-2.6-.9 2.6-.9z" /></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /> <path d="M12 11v5M12 8h.01" /></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M4.5 19.5h15" /></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="5.5" width="13" height="13" rx="2" /> <path d="m16 10 5-3v10l-5-3" /></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.2 7.5 9.5 4.4-1.3 7.5-4.9 7.5-9.5V6z" /> <path d="m9 12 2 2 4-4" /></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2" /> <path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5" /></symbol>
+</svg>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="./" aria-label="sAInmore home">
-      <img src="img/logo.svg" alt="" width="40" height="40">
-      <span class="wordmark"><span class="nm">s</span><span class="ai">AI</span><span class="nm">nmore</span></span>
-    </a>
-    <nav class="site-nav" aria-label="Main">
-      <a class="opt" href="./#features">Features</a>
-      <a class="opt" href="./#faq">FAQ</a>
-      <a class="btn small" href="./#download">Download</a>
-    </nav>
-  </div>
-</header>
+<div class="app">
 
-<main id="main" class="doc">
-  <div class="wrap">
-    <h1>Privacy</h1>
-    <p class="small">Last updated 4 November 2026</p>
-    <p>This notice covers two things: this website, and the sAInmore app for Windows. In short, neither collects your data for us. There’s no sAInmore account, no sAInmore server, no analytics and no advertising.</p>
-
-    <h2>This website</h2>
+<aside class="side">
+  <a class="brand" href="/" aria-label="sAInmore home">
+    <img src="img/logo.svg" alt="" width="32" height="32">
+    <span class="wordmark"><span class="nm">s</span><span class="ai">AI</span><span class="nm">nmore</span></span>
+  </a>
+  <nav class="side-nav" aria-label="Screens">
     <ul>
-      <li>The site is hosted on <strong>GitHub Pages</strong>. GitHub states that when a GitHub Pages site is visited, the visitor’s IP address is logged and stored for security purposes. That log is GitHub’s, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>. We don’t receive or use it.</li>
-      <li>The site sets no cookies and uses no analytics, tracking or social media widgets.</li>
-      <li>Everything on it, including the fonts, is served from this site. Your browser contacts no other server while you read it.</li>
-      <li>The download link takes you to GitHub, where GitHub’s own terms and privacy statement apply.</li>
+      <li><a href="/#projects" data-v="projects"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg><span class="sn">Projects<small>Keep work for one client or topic</small></span></a></li>
     </ul>
-
-    <h2>The sAInmore app</h2>
-
-    <h3>What’s stored on your PC</h3>
+    <p class="side-label">Main</p>
     <ul>
-      <li>Your history, library, prompts, assistants, workflows, benchmarks, projects, documents and settings are stored on your PC, in your Windows user profile (<code>%APPDATA%</code>). If you turn on Sync, encrypted copies also go to a sync folder you choose (see below).</li>
-      <li>API keys you enter are encrypted by Windows for your user account, and are only sent to the provider they belong to.</li>
-      <li>Spending is counted on your PC for every call, also with History off: tokens and estimated cost per model and day, never what you asked or the answers.</li>
-      <li>Voice typing and search by meaning run on your PC. Their models are downloaded once, only when you choose to turn those features on.</li>
-      <li>The app has no telemetry or tracking.</li>
+      <li><a href="/#workspace" data-v="workspace"><svg class="ic" aria-hidden="true"><use href="#i-workspace"/></svg><span class="sn">Workspace<small>AI sites and any website, in tabs</small></span><span class="tag">Try</span></a></li>
+      <li><a href="/#compare" data-v="compare"><svg class="ic" aria-hidden="true"><use href="#i-compare"/></svg><span class="sn">Compare<small>Find which AI is best for your task</small></span><span class="tag">Try</span></a></li>
+      <li><a href="/#ai-studio" data-v="ai-studio"><svg class="ic" aria-hidden="true"><use href="#i-image"/></svg><span class="sn">AI Studio<small>Pictures, video, voice, documents</small></span><span class="tag">Try</span></a></li>
+      <li><a href="/#deepdive" data-v="deepdive"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><span class="sn">DeepDive<small>Your own files, with sources</small></span></a></li>
     </ul>
-
-    <h3>When the app connects to the internet</h3>
+    <p class="side-label">Your things</p>
     <ul>
-      <li><strong>AI websites</strong> you open in the app work as they would in a browser. What you type there goes to that service, under its own terms and privacy policy. Each service has its own separate sign-in inside the app, the same in every workspace. A site can use your microphone only after you allow it for that site, and you can turn it off again from the site’s toolbar. Camera and screen sharing are always blocked for the websites.</li>
-      <li><strong>Other websites</strong> open in the <strong>Web</strong>, <strong>Dev</strong>, <strong>Gaming</strong> and your own workspaces (AI work holds AI services only), and work the same way: what you type there goes to that site, under its own terms. Each workspace keeps its own web sign-ins and cookies on your PC, separate from the AI services: Web keeps the ones it had as Webspace, Dev and Gaming have their own, and a workspace you add can keep its own or share Web’s. Deleting a workspace you added deletes its own web sign-ins; AI sign-ins are never deleted. Only https pages open, except that Dev can also open your own projects on this PC over http (localhost, 127.0.0.1 or [::1]): that page itself is loaded from this PC, but like any web page it can load things from the internet. Words you type in the address box are sent to <strong>DuckDuckGo</strong> as a search. A web page there can capture the mouse (Esc gives it back); AI websites can’t. Files you download go to your Downloads folder. Check the address bar before you sign in.</li>
-      <li><strong>AI Lab, Quick ask and Create</strong> send your question, and any files you attach, directly from your PC to the providers you choose (OpenAI, Anthropic, Google, Mistral, xAI, DeepSeek, Groq, Moonshot, Perplexity or Xiaomi), using your own API key. Where they keep your data: <strong>Mistral</strong> in the EU by default (it may use subprocessors outside the EU); <strong>DeepSeek</strong> in China; <strong>Groq</strong> in the United States; <strong>Moonshot (Kimi)</strong> is a Chinese company; <strong>Perplexity</strong> (USA) doesn’t train on API data and keeps it for a period it doesn’t publish, and the app asks it not to store answers; <strong>Xiaomi</strong> is a Chinese company, and its MiMo API is run by Xiaomi Technology Netherlands (for the EU, UK and Switzerland) or Xiaomi Technologies Singapore (elsewhere), hosted in the Netherlands and Singapore, and may pass data to affiliates elsewhere. Don’t send anything personal or confidential to DeepSeek, Moonshot or Xiaomi; some employers don’t allow them on work devices. The app shows these notes where you add each key. If you turn on <strong>web search</strong>, the provider searches the web for you. Local models through <strong>Ollama</strong> or <strong>LM Studio</strong> stay on your PC: the app reaches them only on this PC (Ollama at <code>127.0.0.1:11434</code>, LM Studio at <code>127.0.0.1:1234</code>). Ollama’s cloud models (names ending in cloud) run on ollama.com.</li>
-      <li><strong>Kept by AI providers:</strong> to make repeated requests cheaper, most AI providers keep a processed form of recent requests (not their text) for your account: OpenAI up to 24 hours, encrypted; Gemini in memory, up to 24 hours; DeepSeek on disk, for a few hours to a few days; Groq up to 2 hours after last use. xAI, Mistral, Moonshot and Xiaomi do this too, without saying for how long. Perplexity says its API keeps no prompts. Anthropic keeps nothing like this unless asked, and sAInmore doesn’t ask. Local models keep nothing outside this PC.</li>
-      <li><strong>Write with AI and Improve with AI</strong> (in Prompts) send your task or prompt to the model you pick, only when you press the button. With a local model, it stays on your PC.</li>
-      <li><strong>Servers you add yourself</strong> (in OpenAI’s format, such as OpenRouter or a company server): your questions, files and that server’s key go to the address you typed (https, or http only for a server on this PC). sAInmore can’t check what such a server does with your messages, or who runs it, so only add one you trust. For OpenRouter, you can require zero data retention.</li>
-      <li><strong>Combine and the AI judge</strong> (in AI Lab) send your question and the answers to the one model you pick, only when you click. The app says where they go before sending. Gemini answers that used Google Search are left out.</li>
-      <li><strong>Challenge</strong> (in AI Lab), only when you click: <em>Challenge this claim</em> sends the sentence you picked, and your objection, back to the model that wrote it; <em>Challenge…</em> sends each model the other models’ answers, without their names, and asks it to revise its own. Gemini answers that used Google Search are never shown to another company’s model.</li>
-      <li><strong>Workflows</strong> (in AI Lab) send each step’s instruction, the files or passages you give that step, and the answers you pass on, to the models you pick for that step; a second opinion sends the same to one more model you pick. Before each step the app shows what it sends, to which company and the estimated cost, and nothing is sent until you run it. Gemini answers that used Google Search, and anything later Gemini steps write from them, only go on to Gemini models. Workflow runs are kept only while History is on.</li>
-      <li><strong>Benchmark</strong> (in AI Lab) sends each task in your set to the models you pick, only when you run it, after showing the cost. Its checks run on this PC; if you turn on the AI judge, the answers also go to the judge model it names. Past runs stay on this PC; your task sets go to your Sync folder only if Sync is on.</li>
-      <li><strong>Project planner</strong> (in Projects) sends what you describe, and any files you attach, to the model you pick, and the check step to the model it uses, after one OK from you. It shows the cost and where your text goes before you start. With a model on this PC, it stays on your PC.</li>
-      <li><strong>Assistants</strong> send your question and the assistant’s instructions to the models it uses, like AI Lab. The <strong>Reflection Journal</strong> template is meant for a model on this PC (Ollama or LM Studio), so your entries stay private; if you pick an online model for it instead, your entries go to that provider.</li>
-      <li><strong>Use copied text</strong> reads the clipboard only when you press its hotkey, and nothing is sent until you choose.</li>
-      <li><strong>Ask with AI in Documents</strong> sends the parts of your files that match your question, and the text around them (short documents almost whole), to the model you pick. Lines that try to give AI tools orders are left out. <strong>Find text</strong> sends nothing.</li>
-      <li><strong>Translator and Summariser</strong> (Tools) send your text to the model you pick; with Ollama or LM Studio nothing leaves your PC. The Summariser downloads the page whose address you type, from your PC: https only, without cookies or sign-ins, never an AI service or an address on your local network. It then sends the page’s text to the model you pick. <strong>Summarise</strong> on a web page in the Workspace sends the text of the page you have open. Only their token counts (no text) are kept on your PC, for Usage, and only when Save history is on.</li>
-      <li><strong>Updates:</strong> when the app starts and every 6 hours while it runs, it asks GitHub whether a newer version exists. GitHub sees your IP address and the app’s version. A new version is downloaded from GitHub only when you click Update now. You can turn the automatic check off in Settings → About; <strong>Check for updates</strong> in the Menu asks GitHub the same question only when you click it.</li>
-      <li><strong>Feedback</strong> is only sent if you choose to. The app prepares an email or a file, and you decide what goes in it (a screenshot, the error log, system details).</li>
-      <li><strong>Sync between your PCs</strong> is off unless you set it up. It writes encrypted files to a folder you choose, such as one synced by OneDrive. Your passphrase isn’t stored in that folder.</li>
+      <li><a href="/#library" data-v="library"><svg class="ic" aria-hidden="true"><use href="#i-library"/></svg><span class="sn">Library<small>Everything you saved from any AI</small></span></a></li>
+      <li><a href="/#prompts" data-v="prompts"><svg class="ic" aria-hidden="true"><use href="#i-prompt"/></svg><span class="sn">Prompts<small>Saved prompts with fill-in blanks</small></span></a></li>
+      <li><a href="/#assistants" data-v="assistants"><svg class="ic" aria-hidden="true"><use href="#i-persona"/></svg><span class="sn">Assistants<small>Instructions for tasks you repeat</small></span></a></li>
     </ul>
-
-    <h3>What the app doesn’t do</h3>
+    <p class="side-label">Tools</p>
     <ul>
-      <li>It doesn’t read the AI websites’ pages, type into them or send messages on them for you.</li>
-      <li>It doesn’t scrape websites. Automated comparisons go through the providers’ official APIs or a server you add yourself, and the Summariser reads only a page you ask it to.</li>
-      <li>It doesn’t sell or share data. There’s nothing for us to share, because we don’t receive any.</li>
+      <li><a href="/#translate" data-v="translate"><svg class="ic" aria-hidden="true"><use href="#i-language"/></svg><span class="sn">Translator<small>Translate with any model, or locally</small></span><span class="tag">Try</span></a></li>
+      <li><a href="/#summarise" data-v="summarise"><svg class="ic" aria-hidden="true"><use href="#i-summary"/></svg><span class="sn">Summariser<small>Summarise a web page, then ask</small></span><span class="tag">Try</span></a></li>
     </ul>
+    <ul class="side-foot">
+      <li><a class="side-dl" href="/#download" data-v="download"><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Download the app</a></li>
+      <li><a href="/#faq" data-v="faq"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>Questions</a></li>
+      <li><a href="privacy.html" aria-current="page"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>Privacy</a></li>
+    </ul>
+  </nav>
+</aside>
 
-    <h3>Costs and subscriptions</h3>
-    <p>Website subscriptions (such as ChatGPT Plus or Claude Pro) and API billing are separate. API use is billed to you by each provider.</p>
+<main id="main">
+<article class="page doc">
+<h1>Privacy</h1>
+<p class="small">Last updated 7 November 2026</p>
+<p>This notice covers two things: this website, and the sAInmore app for Windows. In short, neither collects your data for us. There’s no sAInmore account, no sAInmore server, no analytics and no advertising.</p>
 
-    <h2>Contact</h2>
-    <p>Use <strong>Feedback</strong> in the app to reach the developer.</p>
-  </div>
-</main>
+<h2>This website</h2>
+<ul>
+  <li>The site is hosted on <strong>GitHub Pages</strong>. GitHub states that when a GitHub Pages site is visited, the visitor’s IP address is logged and stored for security purposes. That log is GitHub’s, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>. We don’t receive or use it.</li>
+  <li>The site sets no cookies and uses no analytics, tracking or social media widgets.</li>
+  <li>Everything on it, including the fonts, is served from this site. Your browser contacts no other server while you read it.</li>
+  <li>The download link takes you to GitHub, where GitHub’s own terms and privacy statement apply.</li>
+</ul>
+
+<h2>The sAInmore app</h2>
+
+<h3>What’s stored on your PC</h3>
+<ul>
+  <li>Your history, library, prompts, assistants, workflows, benchmarks, projects, documents and settings are stored on your PC, in your Windows user profile (<code>%APPDATA%</code>). If you turn on Sync, encrypted copies also go to a sync folder you choose (see below).</li>
+  <li>API keys you enter are encrypted by Windows for your user account, and are only sent to the provider they belong to.</li>
+  <li>Spending is counted on your PC for every call, also with History off: tokens and estimated cost per model and day, never what you asked or the answers.</li>
+  <li>Voice typing and search by meaning run on your PC. Their models are downloaded once, only when you choose to turn those features on.</li>
+  <li>The app has no telemetry or tracking.</li>
+</ul>
+
+<h3>When the app connects to the internet</h3>
+<ul>
+  <li><strong>AI websites</strong> you open in the app work as they would in a browser. What you type there goes to that service, under its own terms and privacy policy. Each service has its own separate sign-in inside the app, the same in every workspace. A site can use your microphone only after you allow it for that site, and you can turn it off again from the site’s toolbar. Camera and screen sharing are always blocked for the websites.</li>
+  <li><strong>Other websites</strong> open in the <strong>Web</strong>, <strong>Dev</strong>, <strong>Gaming</strong> and your own workspaces (AI work holds AI services only), and work the same way: what you type there goes to that site, under its own terms. Each workspace keeps its own web sign-ins and cookies on your PC, separate from the AI services: Web keeps the ones it had as Webspace, Dev and Gaming have their own, and a workspace you add can keep its own or share Web’s. Deleting a workspace you added deletes its own web sign-ins; AI sign-ins are never deleted. Only https pages open, except that Dev can also open your own projects on this PC over http (localhost, 127.0.0.1 or [::1]): that page itself is loaded from this PC, but like any web page it can load things from the internet. Words you type in the address box are sent to <strong>DuckDuckGo</strong> as a search. A web page there can capture the mouse (Esc gives it back); AI websites can’t. Files you download go to your Downloads folder. Check the address bar before you sign in.</li>
+  <li><strong>Compare, AI Studio and Quick ask</strong> send your question, and any files you attach, directly from your PC to the providers you choose (OpenAI, Anthropic, Google, Mistral, xAI, DeepSeek, Groq, Moonshot, Perplexity or Xiaomi), using your own API key. Where they keep your data: <strong>Mistral</strong> in the EU by default (it may use subprocessors outside the EU); <strong>DeepSeek</strong> in China; <strong>Groq</strong> in the United States; <strong>Moonshot (Kimi)</strong> is a Chinese company; <strong>Perplexity</strong> (USA) doesn’t train on API data and keeps it for a period it doesn’t publish, and the app asks it not to store answers; <strong>Xiaomi</strong> is a Chinese company, and its MiMo API is run by Xiaomi Technology Netherlands (for the EU, UK and Switzerland) or Xiaomi Technologies Singapore (elsewhere), hosted in the Netherlands and Singapore, and may pass data to affiliates elsewhere. Don’t send anything personal or confidential to DeepSeek, Moonshot or Xiaomi; some employers don’t allow them on work devices. The app shows these notes where you add each key. If you turn on <strong>web search</strong>, the provider searches the web for you. Local models through <strong>Ollama</strong> or <strong>LM Studio</strong> stay on your PC: the app reaches them only on this PC (Ollama at <code>127.0.0.1:11434</code>, LM Studio at <code>127.0.0.1:1234</code>). Ollama’s cloud models (names ending in cloud) run on ollama.com.</li>
+  <li><strong>Kept by AI providers:</strong> to make repeated requests cheaper, most AI providers keep a processed form of recent requests (not their text) for your account: OpenAI up to 24 hours, encrypted; Gemini in memory, up to 24 hours; DeepSeek on disk, for a few hours to a few days; Groq up to 2 hours after last use. xAI, Mistral, Moonshot and Xiaomi do this too, without saying for how long. Perplexity says its API keeps no prompts. Anthropic keeps nothing like this unless asked, and sAInmore doesn’t ask. Local models keep nothing outside this PC.</li>
+  <li><strong>Write with AI and Improve with AI</strong> (in Prompts) send your task or prompt to the model you pick, only when you press the button. With a local model, it stays on your PC.</li>
+  <li><strong>Servers you add yourself</strong> (in OpenAI’s format, such as OpenRouter or a company server): your questions, files and that server’s key go to the address you typed (https, or http only for a server on this PC). sAInmore can’t check what such a server does with your messages, or who runs it, so only add one you trust. For OpenRouter, you can require zero data retention.</li>
+  <li><strong>Combine and the AI judge</strong> (in Compare) send your question and the answers to the one model you pick, only when you click. The app says where they go before sending. Gemini answers that used Google Search are left out.</li>
+  <li><strong>Challenge</strong> (in Compare), only when you click: <em>Challenge this claim</em> sends the sentence you picked, and your objection, back to the model that wrote it; <em>Challenge…</em> sends each model the other models’ answers, without their names, and asks it to revise its own. Gemini answers that used Google Search are never shown to another company’s model.</li>
+  <li><strong>Workflows</strong> (in Compare) send each step’s instruction, the files or passages you give that step, and the answers you pass on, to the models you pick for that step; a second opinion sends the same to one more model you pick. Before each step the app shows what it sends, to which company and the estimated cost, and nothing is sent until you run it. Gemini answers that used Google Search, and anything later Gemini steps write from them, only go on to Gemini models. Workflow runs are kept only while History is on.</li>
+  <li><strong>Benchmark</strong> (in Compare) sends each task in your set to the models you pick, only when you run it, after showing the cost. Its checks run on this PC; if you turn on the AI judge, the answers also go to the judge model it names. Past runs stay on this PC; your task sets go to your Sync folder only if Sync is on.</li>
+  <li><strong>Project planner</strong> (in Projects) sends what you describe, and any files you attach, to the model you pick, and the check step to the model it uses, after one OK from you. It shows the cost and where your text goes before you start. With a model on this PC, it stays on your PC.</li>
+  <li><strong>Assistants</strong> send your question and the assistant’s instructions to the models it uses, like Compare. The <strong>Reflection Journal</strong> template is meant for a model on this PC (Ollama or LM Studio), so your entries stay private; if you pick an online model for it instead, your entries go to that provider.</li>
+  <li><strong>Use copied text</strong> reads the clipboard only when you press its hotkey, and nothing is sent until you choose.</li>
+  <li><strong>Ask with AI in DeepDive</strong> sends the parts of your files that match your question, and the text around them (short documents almost whole), to the model you pick. Lines that try to give AI tools orders are left out. <strong>Find text</strong> sends nothing.</li>
+  <li><strong>Translator and Summariser</strong> (Tools) send your text to the model you pick; with Ollama or LM Studio nothing leaves your PC. The Summariser downloads the page whose address you type, from your PC: https only, without cookies or sign-ins, never an AI service or an address on your local network. It then sends the page’s text to the model you pick. <strong>Summarise</strong> on a web page in the Workspace sends the text of the page you have open. Only their token counts (no text) are kept on your PC, for Usage, and only when Save history is on.</li>
+  <li><strong>Updates:</strong> when the app starts and every 6 hours while it runs, it asks GitHub whether a newer version exists. GitHub sees your IP address and the app’s version. A new version is downloaded from GitHub only when you click Update now. You can turn the automatic check off in Settings → About; <strong>Check for updates</strong> in the Menu asks GitHub the same question only when you click it.</li>
+  <li><strong>Feedback</strong> is only sent if you choose to. The app prepares an email or a file, and you decide what goes in it (a screenshot, the error log, system details).</li>
+  <li><strong>Sync between your PCs</strong> is off unless you set it up. It writes encrypted files to a folder you choose, such as one synced by OneDrive. Your passphrase isn’t stored in that folder.</li>
+</ul>
+
+<h3>What the app doesn’t do</h3>
+<ul>
+  <li>It doesn’t read the AI websites’ pages, type into them or send messages on them for you.</li>
+  <li>It doesn’t scrape websites. Automated comparisons go through the providers’ official APIs or a server you add yourself, and the Summariser reads only a page you ask it to.</li>
+  <li>It doesn’t sell or share data. There’s nothing for us to share, because we don’t receive any.</li>
+</ul>
+
+<h3>Costs and subscriptions</h3>
+<p>Website subscriptions (such as ChatGPT Plus or Claude Pro) and API billing are separate. API use is billed to you by each provider.</p>
+
+<h2>Contact</h2>
+<p>Use <strong>Feedback</strong> in the app to reach the developer.</p>
+</article>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="row">
-      <span><span class="wordmark">s<span class="ai">AI</span>nmore</span> · super AI &amp; more</span>
-      <a href="./">Home</a>
-    </div>
-    <p>sAInmore isn’t affiliated with, endorsed by or sponsored by OpenAI, Anthropic, Google, Microsoft, Mistral AI, DeepSeek, xAI, Groq, Moonshot AI or Perplexity. Product names are trademarks of their respective owners.</p>
-  </div>
+  <p>sAInmore isn’t affiliated with, endorsed by or sponsored by OpenAI, Anthropic, Google, Microsoft, Mistral AI, DeepSeek, xAI, Groq, Moonshot AI or Perplexity. ChatGPT, Claude, Gemini, Copilot, Le Chat, DeepSeek, Grok, Perplexity and other names are trademarks of their respective owners and are used here only to describe which services the app works with.</p>
+  <p>This site uses no cookies, no analytics and no third-party content. © 2026 sAInmore. <a href="privacy.html" aria-current="page">Privacy</a></p>
 </footer>
+
+</main>
+</div>
 </body>
 </html>
