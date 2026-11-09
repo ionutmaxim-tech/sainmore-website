@@ -22,11 +22,15 @@
 .tb-brand img { width: 42px; height: 42px; }
 .tb-lockup { display: inline-flex; flex-direction: column; align-items: stretch; }
 .tb-lockup .wordmark { font-size: 22px; line-height: 1; letter-spacing: 0.02em; }
-.tb-tag { margin-top: 3px; font-size: 9px; font-weight: 500; line-height: 1; text-transform: uppercase; letter-spacing: 0.17em; white-space: nowrap; color: var(--ink-2); }
-.tb-tag .every { font-weight: 600; }
-.tb-pills { display: flex; gap: 2px; margin-right: auto; margin-left: 1.25rem; padding: 2px; border: 1px solid var(--rule); border-radius: 8px; background: var(--well); }
-.tb-pills a { padding: 3px 10px; border-radius: 6px; font-size: 12px; color: var(--ink-2); text-decoration: none; }
-.tb-pills a:hover { background: var(--surface-2); color: var(--ink); }
+/* The app's ? menu (TitleBarLine.tsx at 0.8.28). No script: it opens on hover or keyboard focus, and the ? itself goes to Features. */
+.tb-help { position: relative; z-index: 30; margin-left: auto; margin-right: 6px; }
+.tb-q { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 8px; color: var(--ink-2); }
+.tb-q:hover { background: var(--surface-2); color: var(--ink); }
+.tb-menu { opacity: 0; pointer-events: none; position: absolute; top: 100%; right: 0; width: 200px; padding: 6px; border: 1px solid var(--rule-strong); border-radius: 12px; background: var(--surface); box-shadow: 0 12px 32px rgb(0 0 0 / 0.35); }
+.tb-help::after { content: ""; position: absolute; top: 100%; left: 0; right: 0; height: 8px; }
+.tb-help:hover .tb-menu, .tb-help:has(:focus-visible) .tb-menu { opacity: 1; pointer-events: auto; }
+.tb-menu a { display: flex; align-items: center; height: 32px; padding: 0 8px; border-radius: 8px; font-size: 13px; color: var(--ink); text-decoration: none; }
+.tb-menu a:hover, .tb-menu a:focus-visible { background: var(--surface-2); }
 .tb-dl { display: inline-flex; align-items: center; gap: 0.4rem; }
 .tb-dl .ic { width: 16px; height: 16px; }
 /* Status bar: 28 px, 11.5 px text */
@@ -285,7 +289,6 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
 @media (max-width: 860px) {
   .app { display: block; height: auto; }
   .titlebar { height: 48px; }
-  .tb-tag { display: none; }
   .tb-lockup .wordmark { font-size: 19px; }
   .tb-brand img { width: 34px; height: 34px; }
   .side {
@@ -308,7 +311,7 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
   .statusbar { height: 28px; }
   .parted-view { margin: 0 calc(-1 * var(--mainpad)); grid-template-columns: 1fr; }
   .parted-view > .parts-list { position: static; height: auto; }
-  .tb-pills { display: none; }
+  .tb-help { display: none; }
   .parts-list { flex-direction: row; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--rule); padding: 6px; }
   .part { min-height: 36px; align-items: center; padding: 4px 8px 4px 4px; white-space: nowrap; }
   .part .ic { margin-top: 0; }
