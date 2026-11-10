@@ -317,7 +317,7 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
   .part .ic { margin-top: 0; }
   .part .pn small, .parts-rule { display: none; }
   .parts-box { flex-direction: row; flex: none; }
-  .parts-below { display: none; }
+  .parts-below, .parts-group-label { display: none; }
   .answers, .tr-cols, .cr-body { grid-template-columns: 1fr; }
   .ans + .ans { border-left: 0; border-top: 2px solid var(--accent-line); }
   .tr-out { border-left: 0; border-top: 2px solid var(--accent-line); }
@@ -364,12 +364,10 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
 #deepdive:has(#dd-docs:checked) .ab-dd-docs,
 #deepdive:has(#dd-research:checked) .ab-dd-research,
 #library:has(#lb-all:checked) .ab-lb-all,
-#library:has(#lb-img:checked) .ab-lb-img,
-#library:has(#lb-vid:checked) .ab-lb-vid,
-#library:has(#lb-doc:checked) .ab-lb-doc,
-#library:has(#lb-audio:checked) .ab-lb-audio,
 #library:has(#lb-dl:checked) .ab-lb-dl,
 #library:has(#lb-fav:checked) .ab-lb-fav,
+#library:has(#lb-web:checked) .ab-lb-web,
+#library:has(#lb-copies:checked) .ab-lb-copies,
 #library:has(#lb-bin:checked) .ab-lb-bin,
 #prompts:has(#pr-mine:checked) .ab-pr-mine,
 #prompts:has(#pr-start:checked) .ab-pr-start,
@@ -382,12 +380,10 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
 #deepdive:has(#dd-docs:checked) .p-dd-docs,
 #deepdive:has(#dd-research:checked) .p-dd-research,
 #library:has(#lb-all:checked) .p-lb-all,
-#library:has(#lb-img:checked) .p-lb-img,
-#library:has(#lb-vid:checked) .p-lb-vid,
-#library:has(#lb-doc:checked) .p-lb-doc,
-#library:has(#lb-audio:checked) .p-lb-audio,
 #library:has(#lb-dl:checked) .p-lb-dl,
 #library:has(#lb-fav:checked) .p-lb-fav,
+#library:has(#lb-web:checked) .p-lb-web,
+#library:has(#lb-copies:checked) .p-lb-copies,
 #library:has(#lb-bin:checked) .p-lb-bin,
 #prompts:has(#pr-mine:checked) .p-pr-mine,
 #prompts:has(#pr-start:checked) .p-pr-start,
@@ -395,6 +391,9 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
 #assistants:has(#as-new:checked) .p-as-new,
 #assistants:has(#as-mine:checked) .p-as-mine,
 #assistants:has(#as-tpl:checked) .p-as-tpl { display: block; }
-#creator:has(#cl-mult:checked) .ab-cl-mult, #creator:has(#cl-brand:checked) .ab-cl-brand { display: inline; }
-#creator:has(#cl-mult:checked) .p-cl-mult, #creator:has(#cl-brand:checked) .p-cl-brand { display: block; }
+#creator:has(#cl-mult:checked) .ab-cl-mult, #creator:has(#cl-print:checked) .ab-cl-print, #creator:has(#cl-list:checked) .ab-cl-list, #creator:has(#cl-brand:checked) .ab-cl-brand, #creator:has(#cl-markets:checked) .ab-cl-markets { display: inline; }
+#creator:has(#cl-mult:checked) .p-cl-mult, #creator:has(#cl-print:checked) .p-cl-print, #creator:has(#cl-list:checked) .p-cl-list, #creator:has(#cl-brand:checked) .p-cl-brand, #creator:has(#cl-markets:checked) .p-cl-markets { display: block; }
 /* @@end generated */
+/* Named groups of parts (PartsList.tsx at v0.8.30: Creator’s Lab, Make · Your shop). */
+.parts-group-label { display: block; margin: 2px 6px 4px; font-size: 10.5px; font-weight: 700; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); }
+.parts-box + .parts-group-label { margin-top: 10px; }
