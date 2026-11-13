@@ -154,7 +154,7 @@ main { grid-area: main; position: relative; z-index: 1; min-width: 0; min-height
 .lab:has(#pc-flow:checked) .p-flow, .lab:has(#pc-bench:checked) .p-bench, .lab:has(#pc-ext:checked) .p-ext, .lab:has(#pc-hist:checked) .p-hist,
 .lab:has(#pc-board:checked) .p-board, .lab:has(#pc-keys:checked) .p-keys { display: block; }
 .cr:not(:has(#ck-img:checked, #ck-vid:checked)) .p-demo { display: none; }
-.cr:has(#ck-arena:checked) .p-arena, .cr:has(#ck-canvas:checked) .p-canvas, .cr:has(#ck-doc:checked) .p-doc, .cr:has(#ck-code:checked) .p-code,
+.cr:has(#ck-arena:checked) .p-arena, .cr:has(#ck-canvas:checked) .p-canvas, .cr:has(#ck-3d:checked) .p-3d, .cr:has(#ck-doc:checked) .p-doc, .cr:has(#ck-code:checked) .p-code,
 .cr:has(#ck-audio:checked) .p-audio, .cr:has(#ck-files:checked) .p-files, .cr:has(#ck-keys:checked) .p-keys { display: block; }
 
 /* ---------- Mock app window ---------- */
@@ -356,6 +356,7 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
 #compare:has(#pc-keys:checked) .ab-pc-keys,
 #ai-studio:has(#ck-arena:checked) .ab-ck-arena,
 #ai-studio:has(#ck-canvas:checked) .ab-ck-canvas,
+#ai-studio:has(#ck-3d:checked) .ab-ck-3d,
 #ai-studio:has(#ck-img:checked) .ab-ck-img,
 #ai-studio:has(#ck-doc:checked) .ab-ck-doc,
 #ai-studio:has(#ck-code:checked) .ab-ck-code,
