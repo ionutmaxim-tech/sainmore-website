@@ -156,9 +156,22 @@ strong { font-weight: 700; }
 /* Hero, laid out like the app's welcome screen */
 .welcome { display: flex; flex-direction: column; align-items: center; text-align: center; }
 .welcome-logo img { display: block; width: clamp(140px, 30vw, 196px); height: auto; }
-.welcome h1 { display: flex; flex-direction: column; align-items: center; margin: 0.25rem 0 0; max-width: none; }
+/* 0.8.38: the cube stands on a soft dark floor shadow, as on the app's Welcome screen (percentages follow the picture's size; values from the design chat's NOTE-0.8.38-CRISP.md). */
+.welcome-logo { position: relative; display: inline-block; }
+.welcome-logo::after {
+  content: ''; position: absolute; left: 14%; right: 14%; bottom: 5%; height: 15%;
+  border-radius: 50%; background: radial-gradient(closest-side, rgb(0 0 0 / 0.7), rgb(0 0 0 / 0.32) 58%, transparent);
+  filter: blur(5px); pointer-events: none;
+}
+.welcome h1 { position: relative; display: flex; flex-direction: column; align-items: center; margin: 0.25rem 0 0; max-width: none; }
 .welcome-to { font-family: var(--font); font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.42em; color: var(--ink-3); margin-right: -0.42em; }
 .wordmark.big { font-size: clamp(3rem, 11vw, 4.75rem); line-height: 1.05; letter-spacing: 0.02em; margin-top: 0.25rem; }
+/* 0.8.38: the name has a soft dark shadow under the letters, as in the app (styles.css .brand-shadow). A drop-shadow filter, because the letters are gradient-filled text. */
+/* Dark only: on this site's light page the same shadow looks like a smudge under the letters. */
+@media (prefers-color-scheme: dark) {
+  .tb-lockup .wordmark { filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.55)) drop-shadow(0 4px 5px rgb(0 0 0 / 0.42)); }
+  .wordmark.big { filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.5)) drop-shadow(0 12px 14px rgb(0 0 0 / 0.45)); }
+}
 .tagline { margin: 0.6rem 0 0; max-width: none; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.42em; color: var(--ink-3); margin-right: -0.42em; }
 .hero .lede { margin: 2rem auto 0; text-align: center; }
 .hero .lede strong { color: var(--ink); }
