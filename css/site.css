@@ -155,7 +155,10 @@ strong { font-weight: 700; }
 
 /* Hero, laid out like the app's welcome screen */
 .welcome { display: flex; flex-direction: column; align-items: center; text-align: center; }
-.welcome-logo img { display: block; width: clamp(140px, 30vw, 196px); height: auto; }
+/* The hero logo is drawn live by js/sainmore-logo.js (user 2026-11-18). Until it has drawn, without JavaScript, and in a browser too old to run it, the still picture shows. */
+.welcome-logo canvas { display: block; width: clamp(140px, 30vw, 196px); height: auto; }
+canvas.sainmore-logo { background: url(../img/logo-closed-392.webp) center / contain no-repeat; }
+canvas.sainmore-logo[data-sainmore-ready] { background: none; }
 /* 0.8.38: the cube stands on a soft dark floor shadow, as on the app's Welcome screen (percentages follow the picture's size; values from the design chat's NOTE-0.8.38-CRISP.md). */
 .welcome-logo { position: relative; display: inline-block; }
 .welcome-logo::after {

@@ -2,7 +2,7 @@
 
 Static website for **sAInmore** (super AI & more), served by GitHub Pages.
 
-- Plain HTML + CSS, no JavaScript, no cookies, no external requests.
+- Plain HTML + CSS, no cookies, no external requests. The only script is `js/sainmore-logo.js`, which draws the hero logo (it makes no request and stores nothing); without JavaScript the logo is a still picture.
 - `index.html`: home page. `privacy.html`: privacy notice (site + app).
 - Facts on the pages must match the app's published release notes (`RELEASE-<version>.md` in the app project). The facts used are listed in a comment at the top of `index.html`.
 - Fonts: the text uses Windows' own Segoe UI Variable (nothing downloaded; elsewhere the system font). Audiowide, for the name and the sidebar, is self-hosted under the SIL Open Font License (`fonts/OFL-Audiowide.txt`).
