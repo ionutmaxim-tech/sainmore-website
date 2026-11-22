@@ -117,13 +117,13 @@ main { grid-area: main; position: relative; z-index: 1; min-width: 0; min-height
   body:has(#compare:target) a[data-v="compare"], body:has(#ai-studio:target) a[data-v="ai-studio"], body:has(#creator:target) a[data-v="creator"],
   body:has(#library:target) a[data-v="library"], body:has(#deepdive:target) a[data-v="deepdive"],
   body:has(#prompts:target) a[data-v="prompts"], body:has(#assistants:target) a[data-v="assistants"],
-  body:has(#translate:target) a[data-v="translate"], body:has(#summarise:target) a[data-v="summarise"],
+  body:has(#automations:target) a[data-v="automations"], body:has(#translate:target, #summarise:target) a[data-v="deepdive"],
   body:has(#faq:target, #faq :target) a[data-v="faq"] { background: var(--btn-bg); color: var(--btn-ink); }
   body:has(#setup:target) a[data-v="setup"] small, body:has(#projects:target) a[data-v="projects"] small, body:has(#workspace:target) a[data-v="workspace"] small,
   body:has(#compare:target) a[data-v="compare"] small, body:has(#ai-studio:target) a[data-v="ai-studio"] small, body:has(#creator:target) a[data-v="creator"] small,
   body:has(#library:target) a[data-v="library"] small, body:has(#deepdive:target) a[data-v="deepdive"] small,
   body:has(#prompts:target) a[data-v="prompts"] small, body:has(#assistants:target) a[data-v="assistants"] small,
-  body:has(#translate:target) a[data-v="translate"] small, body:has(#summarise:target) a[data-v="summarise"] small { color: var(--btn-ink); }
+  body:has(#automations:target) a[data-v="automations"] small, body:has(#translate:target, #summarise:target) a[data-v="deepdive"] small { color: var(--btn-ink); }
   body:has(#download:target, #download :target) a[data-v="download"] { outline: 2px solid var(--focus); outline-offset: 2px; }
 }
 
@@ -421,6 +421,11 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
 #creator:has(#cl-mult:checked) .ab-cl-mult, #creator:has(#cl-social:checked) .ab-cl-social, #creator:has(#cl-plan:checked) .ab-cl-plan, #creator:has(#cl-titles:checked) .ab-cl-titles, #creator:has(#cl-stickers:checked) .ab-cl-stickers, #creator:has(#cl-print:checked) .ab-cl-print, #creator:has(#cl-list:checked) .ab-cl-list, #creator:has(#cl-brand:checked) .ab-cl-brand, #creator:has(#cl-markets:checked) .ab-cl-markets { display: inline; }
 #creator:has(#cl-mult:checked) .p-cl-mult, #creator:has(#cl-social:checked) .p-cl-social, #creator:has(#cl-plan:checked) .p-cl-plan, #creator:has(#cl-titles:checked) .p-cl-titles, #creator:has(#cl-stickers:checked) .p-cl-stickers, #creator:has(#cl-print:checked) .p-cl-print, #creator:has(#cl-list:checked) .p-cl-list, #creator:has(#cl-brand:checked) .p-cl-brand, #creator:has(#cl-markets:checked) .p-cl-markets { display: block; }
 /* @@end generated */
+/* 0.8.40: DeepDive's Summarise and Translate parts, the Library's Knowledge part, and the Automations place. */
+#deepdive:has(#dd-summarise:checked) .ab-dd-summarise, #deepdive:has(#dd-translate:checked) .ab-dd-translate, #library:has(#lb-knowledge:checked) .ab-lb-knowledge,
+#automations:has(#au-mine:checked) .ab-au-mine, #automations:has(#au-inbox:checked) .ab-au-inbox, #automations:has(#au-hist:checked) .ab-au-hist, #automations:has(#au-templates:checked) .ab-au-templates { display: inline; }
+#deepdive:has(#dd-summarise:checked) .p-dd-summarise, #deepdive:has(#dd-translate:checked) .p-dd-translate, #library:has(#lb-knowledge:checked) .p-lb-knowledge,
+#automations:has(#au-mine:checked) .p-au-mine, #automations:has(#au-inbox:checked) .p-au-inbox, #automations:has(#au-hist:checked) .p-au-hist, #automations:has(#au-templates:checked) .p-au-templates { display: block; }
 /* Named groups of parts (PartsList.tsx at v0.8.30: Creator’s Lab, Make · Your shop). */
 .parts-group-label { display: block; margin: 2px 6px 4px; font-size: 10.5px; font-weight: 700; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); }
 .parts-box + .parts-group-label { margin-top: 10px; }
