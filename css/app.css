@@ -423,9 +423,9 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
 /* @@end generated */
 /* 0.8.40: DeepDive's Summarise and Translate parts, the Library's Knowledge part, and the Automations place. */
 #deepdive:has(#dd-summarise:checked) .ab-dd-summarise, #deepdive:has(#dd-translate:checked) .ab-dd-translate, #library:has(#lb-knowledge:checked) .ab-lb-knowledge,
-#automations:has(#au-mine:checked) .ab-au-mine, #automations:has(#au-inbox:checked) .ab-au-inbox, #automations:has(#au-hist:checked) .ab-au-hist, #automations:has(#au-templates:checked) .ab-au-templates { display: inline; }
+#automations:has(#au-mine:checked) .ab-au-mine, #automations:has(#au-inbox:checked) .ab-au-inbox, #automations:has(#au-hist:checked) .ab-au-hist, #automations:has(#au-templates:checked) .ab-au-templates, #automations:has(#au-calendar:checked) .ab-au-calendar { display: inline; }
 #deepdive:has(#dd-summarise:checked) .p-dd-summarise, #deepdive:has(#dd-translate:checked) .p-dd-translate, #library:has(#lb-knowledge:checked) .p-lb-knowledge,
-#automations:has(#au-mine:checked) .p-au-mine, #automations:has(#au-inbox:checked) .p-au-inbox, #automations:has(#au-hist:checked) .p-au-hist, #automations:has(#au-templates:checked) .p-au-templates { display: block; }
+#automations:has(#au-mine:checked) .p-au-mine, #automations:has(#au-inbox:checked) .p-au-inbox, #automations:has(#au-hist:checked) .p-au-hist, #automations:has(#au-templates:checked) .p-au-templates, #automations:has(#au-calendar:checked) .p-au-calendar { display: block; }
 /* Named groups of parts (PartsList.tsx at v0.8.30: Creator’s Lab, Make · Your shop). */
 .parts-group-label { display: block; margin: 2px 6px 4px; font-size: 10.5px; font-weight: 700; line-height: 1.2; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); }
 .parts-box + .parts-group-label { margin-top: 10px; }
