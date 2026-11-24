@@ -433,3 +433,8 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
 .parts-box + .parts-group-label { margin-top: 10px; }
 /* Phones: the parts are one row, so no group names; and a screen opened by its link starts below the sticky sidebar row, not under it. */
 @media (max-width: 860px) { .parts-group-label { display: none; } .view { scroll-margin-top: 64px; } }
+
+.bar-fig .bars { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.5rem; }
+.bar-fig .shot { display: block; height: auto; max-width: 100%; width: auto; }
+.bar-fig .bar-l { width: 450px; }
+.bar-fig .bar-r { width: 150px; }
