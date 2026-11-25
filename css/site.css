@@ -19,11 +19,11 @@
   --overlay: #e4e7ec;       /* app overlay: the current sidebar item */
   --ink: #16181d;           /* app fg */
   --ink-2: #4b5563;         /* app fg-muted */
-  --ink-3: #5d6470;         /* app fg-subtle */
+  --ink-3: #555c68;         /* app fg-subtle (#5d6470), a shade darker so it reads on the tinted page */
   --rule: #e1e4ea;          /* app line */
   --rule-strong: #cbd0d8;   /* app line-strong */
 
-  --accent: #4c5bd4;        /* app accent */
+  --accent: #4250c6;        /* app accent (#4c5bd4), a shade darker for links on the tinted page */
   --accent-line: #4c5bd4;
   --peri: #7c6cf6;
   --peri-soft: #e4e7ec;     /* = overlay, as the app highlights with overlay */
@@ -35,7 +35,20 @@
   --btn-ink: #ffffff;       /* app on-accent */
   --focus: #4c5bd4;         /* the app's focus ring is the accent */
   --ok: #18864f;            /* app ok */
-  --well: color-mix(in srgb, #f4f5f7, black 7%);  /* app well */
+
+  /* The app's default look (sidebarPalette.ts at v0.8.45). Light: worked out from Standard light's colours, as the app does. */
+  --win: #e4e6e8;           /* the window behind everything: canvas 93 %, text 7 % */
+  --glow-a: rgb(76 91 212 / 0.14); --glow-b: rgb(63 79 208 / 0.06); --glow-c: rgb(11 120 145 / 0.09);
+  --page-cyan: rgb(11 120 145 / 0.06); --dots: rgb(76 91 212 / 0.08); --main-bg: rgb(244 245 247 / 0.34); --main-rim: rgb(76 91 212 / 0.16);
+  --side-card: #f4f5f7;     /* a card in the sidebar */
+  --lit-from: #3f4fd0; --lit-to: #305abe; --on-lit: #ffffff;   /* the lit part and the main buttons */
+  --dot: rgb(76 91 212 / 0.6); --tline: rgb(76 91 212 / 0.5); --light: #4c5bd4;
+  --frame: rgb(76 91 212 / 0.38); --frame-glow: rgb(76 91 212 / 0.16); --card-glow: rgb(76 91 212 / 0.45); --hover: rgb(76 91 212 / 0.75);
+  --cyan-soft: #394494;     /* the small heading on a screen's header card */
+  --card-a: #ffffff; --card-b: #efefef; --card-edge: rgb(22 24 29 / 0.14);
+  --card-hi: inset 0 1px 0 rgb(255 255 255 / 0.7); --card-shadow: 0 22px 30px -24px rgb(0 0 0 / 0.2);
+  --lit-shadow: 0 5px 8px -5px rgb(0 0 0 / 0.3);
+  --well: #e7e8ea; --well-edge: rgb(22 24 29 / 0.2);
 
   --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;  /* the app's --font-sans */
   --font-display: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
@@ -50,29 +63,42 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --canvas: #0b0d10;
-    --surface: #111419;
-    --surface-2: #171b21;
-    --overlay: #1e232b;
-    --ink: #e8eaed;
-    --ink-2: #9aa3ae;
-    --ink-3: #848d99;
-    --rule: #222730;
-    --rule-strong: #2f3540;
+    /* Standard dark: the app's violet-navy, its own values (sidebarPalette.ts at v0.8.45). */
+    --canvas: #05060a;
+    --surface: #0a0c12;
+    --surface-2: #11141b;
+    --overlay: #171b24;
+    --ink: #f4f4f5;
+    --ink-2: #d4d4d8;
+    --ink-3: #a1a1aa;
+    --rule: #1c2029;
+    --rule-strong: #2a303c;
 
-    --accent: #8e9dff;
-    --accent-line: #8e9dff;
-    --peri: #7c6cf6;
-    --peri-soft: #1e232b;
-    --ai: #5fd3ee;
+    --accent: #a78bfa;
+    --accent-line: #8b5cf6;
+    --peri: #8b5cf6;
+    --peri-soft: #171b24;
+    --ai: #38bdf8;
     --amber: #e6b450;
     --amber-soft: #2a2213;
 
-    --btn-bg: #5c6cd6;
+    --btn-bg: #7c3aed;
     --btn-ink: #ffffff;
-    --focus: #8e9dff;
+    --focus: #a78bfa;
     --ok: #4cc38a;
-    --well: color-mix(in srgb, #0b0d10, black 45%);
+
+    --win: #030408;
+    --glow-a: rgb(139 92 246 / 0.17); --glow-b: rgb(124 58 237 / 0.07); --glow-c: rgb(56 189 248 / 0.12);
+    --page-cyan: rgb(56 189 248 / 0.06); --dots: rgb(167 139 250 / 0.1); --main-bg: rgb(5 6 10 / 0.34); --main-rim: rgb(139 92 246 / 0.16);
+    --side-card: #05060a;
+    --lit-from: #7c3aed; --lit-to: #0277bd; --on-lit: #ffffff;
+    --dot: rgb(56 189 248 / 0.6); --tline: rgb(56 189 248 / 0.5); --light: #7dd3fc;
+    --frame: rgb(139 92 246 / 0.35); --frame-glow: rgb(139 92 246 / 0.16); --card-glow: rgb(56 189 248 / 0.5); --hover: rgb(56 189 248 / 0.75);
+    --cyan-soft: #7dd3fc;
+    --card-a: #0e1221; --card-b: #070a14; --card-edge: rgb(255 255 255 / 0.07);
+    --card-hi: inset 0 1px 0 rgb(255 255 255 / 0.06); --card-shadow: 0 62px 68px -40px rgb(0 0 0 / 0.7);
+    --lit-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.4);
+    --well: #05060c; --well-edge: rgb(255 255 255 / 0.15);
   }
 }
 
