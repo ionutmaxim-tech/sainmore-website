@@ -456,8 +456,8 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
 #assistants:has(#as-new:checked) .p-as-new,
 #assistants:has(#as-mine:checked) .p-as-mine,
 #assistants:has(#as-tpl:checked) .p-as-tpl { display: block; }
-#creator:has(#cl-mult:checked) .ab-cl-mult, #creator:has(#cl-social:checked) .ab-cl-social, #creator:has(#cl-plan:checked) .ab-cl-plan, #creator:has(#cl-titles:checked) .ab-cl-titles, #creator:has(#cl-stickers:checked) .ab-cl-stickers, #creator:has(#cl-print:checked) .ab-cl-print, #creator:has(#cl-list:checked) .ab-cl-list, #creator:has(#cl-brand:checked) .ab-cl-brand, #creator:has(#cl-markets:checked) .ab-cl-markets { display: inline; }
-#creator:has(#cl-mult:checked) .p-cl-mult, #creator:has(#cl-social:checked) .p-cl-social, #creator:has(#cl-plan:checked) .p-cl-plan, #creator:has(#cl-titles:checked) .p-cl-titles, #creator:has(#cl-stickers:checked) .p-cl-stickers, #creator:has(#cl-print:checked) .p-cl-print, #creator:has(#cl-list:checked) .p-cl-list, #creator:has(#cl-brand:checked) .p-cl-brand, #creator:has(#cl-markets:checked) .p-cl-markets { display: block; }
+#creator:has(#cl-mult:checked) .ab-cl-mult, #creator:has(#cl-social:checked) .ab-cl-social, #creator:has(#cl-plan:checked) .ab-cl-plan, #creator:has(#cl-titles:checked) .ab-cl-titles, #creator:has(#cl-stickers:checked) .ab-cl-stickers, #creator:has(#cl-print:checked) .ab-cl-print, #creator:has(#cl-device:checked) .ab-cl-device, #creator:has(#cl-list:checked) .ab-cl-list, #creator:has(#cl-brand:checked) .ab-cl-brand, #creator:has(#cl-markets:checked) .ab-cl-markets { display: inline; }
+#creator:has(#cl-mult:checked) .p-cl-mult, #creator:has(#cl-social:checked) .p-cl-social, #creator:has(#cl-plan:checked) .p-cl-plan, #creator:has(#cl-titles:checked) .p-cl-titles, #creator:has(#cl-stickers:checked) .p-cl-stickers, #creator:has(#cl-print:checked) .p-cl-print, #creator:has(#cl-device:checked) .p-cl-device, #creator:has(#cl-list:checked) .p-cl-list, #creator:has(#cl-brand:checked) .p-cl-brand, #creator:has(#cl-markets:checked) .p-cl-markets { display: block; }
 /* @@end generated */
 /* 0.8.40: DeepDive's Summarise and Translate parts, the Library's Knowledge part, and the Automations place. */
 #deepdive:has(#dd-summarise:checked) .ab-dd-summarise, #deepdive:has(#dd-translate:checked) .ab-dd-translate, #library:has(#lb-knowledge:checked) .ab-lb-knowledge,
@@ -554,6 +554,7 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
   body:has(#cl-titles:checked) .tree label[for="cl-titles"],
   body:has(#cl-stickers:checked) .tree label[for="cl-stickers"],
   body:has(#cl-print:checked) .tree label[for="cl-print"],
+  body:has(#cl-device:checked) .tree label[for="cl-device"],
   body:has(#cl-list:checked) .tree label[for="cl-list"],
   body:has(#cl-brand:checked) .tree label[for="cl-brand"],
   body:has(#cl-markets:checked) .tree label[for="cl-markets"],
@@ -598,6 +599,7 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
   body:has(#cl-titles:checked) .tree label[for="cl-titles"]::before,
   body:has(#cl-stickers:checked) .tree label[for="cl-stickers"]::before,
   body:has(#cl-print:checked) .tree label[for="cl-print"]::before,
+  body:has(#cl-device:checked) .tree label[for="cl-device"]::before,
   body:has(#cl-list:checked) .tree label[for="cl-list"]::before,
   body:has(#cl-brand:checked) .tree label[for="cl-brand"]::before,
   body:has(#cl-markets:checked) .tree label[for="cl-markets"]::before,
@@ -642,6 +644,7 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
   body:has(#cl-titles:checked) .tree label[for="cl-titles"]::after,
   body:has(#cl-stickers:checked) .tree label[for="cl-stickers"]::after,
   body:has(#cl-print:checked) .tree label[for="cl-print"]::after,
+  body:has(#cl-device:checked) .tree label[for="cl-device"]::after,
   body:has(#cl-list:checked) .tree label[for="cl-list"]::after,
   body:has(#cl-brand:checked) .tree label[for="cl-brand"]::after,
   body:has(#cl-markets:checked) .tree label[for="cl-markets"]::after,
@@ -686,6 +689,7 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
   body:has(#cl-titles:focus-visible) .tree label[for="cl-titles"],
   body:has(#cl-stickers:focus-visible) .tree label[for="cl-stickers"],
   body:has(#cl-print:focus-visible) .tree label[for="cl-print"],
+  body:has(#cl-device:focus-visible) .tree label[for="cl-device"],
   body:has(#cl-list:focus-visible) .tree label[for="cl-list"],
   body:has(#cl-brand:focus-visible) .tree label[for="cl-brand"],
   body:has(#cl-markets:focus-visible) .tree label[for="cl-markets"],
@@ -736,6 +740,7 @@ video.pic { aspect-ratio: 16 / 9; background: #000; }
   body:has(#cl-titles:checked) .crumb.c-cl-titles,
   body:has(#cl-stickers:checked) .crumb.c-cl-stickers,
   body:has(#cl-print:checked) .crumb.c-cl-print,
+  body:has(#cl-device:checked) .crumb.c-cl-device,
   body:has(#cl-list:checked) .crumb.c-cl-list,
   body:has(#cl-brand:checked) .crumb.c-cl-brand,
   body:has(#cl-markets:checked) .crumb.c-cl-markets,
