@@ -271,6 +271,8 @@ main { grid-area: main; position: relative; z-index: 1; min-width: 0; min-height
 .lab:has(#vA:checked) .ans:nth-child(1), .lab:has(#vB:checked) .ans:nth-child(2), .lab:has(#vC:checked) .ans:nth-child(3) { box-shadow: inset 0 0 0 3px var(--accent-line); }
 .real { margin: 1.5rem 0 0; }
 .real .shot { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: var(--radius); }
+/* A picture of a small window (Quick ask) is not stretched to the column. */
+.real.real-small { max-width: 38.75rem; }
 .real figcaption { margin-top: 0.6rem; font-size: 0.9rem; color: var(--ink-3); }
 /* The same screen in four looks (0.8.39 draft): two by two, one column on a phone. */
 .looks-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
